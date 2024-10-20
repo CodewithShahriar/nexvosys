@@ -37,16 +37,13 @@ nav a {
 
 .icon {
     margin-right: 15px; /* Space between icon and title */
+    font-size: 50px; /* Icon size */
+    color: #6689FF; /* Icon color */
     transition: transform 0.3s; /* Animation for hover effect */
 }
 
-.icon img {
-    width: 50px; /* Adjust icon size */
-    height: 50px; /* Adjust icon size */
-}
-
 .icon:hover {
-    transform: scale(1.1); /* Scale up on hover */
+    transform: scale(1.2); /* Scale up on hover */
 }
 
 .service h2 {
