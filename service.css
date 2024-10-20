@@ -62,16 +62,18 @@ nav a {
     display: inline-block;
     padding: 10px 15px;
     background-color: #6689FF; /* Button color matching the main theme */
-    color: #ffffff;
+    color: #ffffff; /* Text color */
     text-decoration: none;
     border-radius: 5px;
     margin: 0 10px; /* Space between buttons */
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s; /* Include color transition */
 }
 
 .btn:hover {
     background-color: #4a68c7; /* Darker shade for hover effect */
+    color: #ffffff; /* Keep text color white on hover for better readability */
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
