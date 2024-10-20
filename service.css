@@ -51,6 +51,8 @@
 /* Paragraph styling */
 .service-card p {
     margin: 10px 0;
+    text-align: justify; /* Justify text */
+    line-height: 1.5; /* Line height for better readability */
 }
 
 /* Button container */
@@ -77,19 +79,6 @@
     background-color: #6689FF; /* Dark blue background on hover */
     color: #ffffff; /* Change text color to white on hover */
 }
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .service-row {
-        flex-direction: column; /* Stack cards vertically on smaller screens */
-    }
-
-    .service-card {
-        margin: 10px 0; /* Space between stacked cards */
-    }
-}
-
 
 /* Learn More Button styling */
 .learn-more-btn {
@@ -123,6 +112,13 @@
     background-color: #4a68c7; /* Darker blue on hover */
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-row {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+    }
 
-
-
+    .service-card {
+        margin: 10px 0; /* Space between stacked cards */
+    }
+}
