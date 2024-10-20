@@ -1,3 +1,4 @@
+/* Container styling */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -5,24 +6,28 @@
     padding: 20px 0;
 }
 
+/* Service Row */
 .service-row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px; /* Space between rows */
 }
 
+/* Service Card */
 .service-card {
     flex: 1; /* Each card takes equal space */
     margin: 0 10px; /* Space between cards */
     background: #ffffff;
     padding: 30px;
+    border: 1px solid #ccc; /* Added border */
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center; /* Center align content in cards */
 }
 
+/* Icon styling */
 .service-card .icon {
-    font-size: 50px;
+    font-size: 40px;
     color: #888;
     transition: transform 0.3s;
 }
@@ -31,21 +36,26 @@
     transform: scale(1.1);
 }
 
+/* Headings */
 .service-card h2 {
+    font-size: 30px;
     color: #35424a;
     margin-top: 10px;
 }
 
+/* Paragraph styling */
 .service-card p {
     margin: 10px 0;
 }
 
+/* Button container */
 .buttons {
     margin-top: 15px;
     display: flex;
     justify-content: center;
 }
 
+/* Button styling */
 .btn {
     display: inline-block;
     padding: 10px 15px;
