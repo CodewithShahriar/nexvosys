@@ -12,131 +12,247 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <style>
+        .ie-panel {
+            display: none;
+            background: #212121;
+            padding: 10px 0;
+            box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);
+            clear: both;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        .service-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px; /* Space between rows */
+        }
+
+        .service-card {
+            flex: 1; /* Each card takes equal space */
+            margin: 0 10px; /* Space between cards */
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center align content in cards */
+        }
+
+        .service-card .icon {
+            font-size: 50px;
+            color: #888;
+            transition: transform 0.3s;
+        }
+
+        .service-card .icon:hover {
+            transform: scale(1.1);
+        }
+
+        .service-card h2 {
+            color: #35424a;
+            margin-top: 10px;
+        }
+
+        .service-card p {
+            margin: 10px 0;
+        }
+
+        .buttons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #6689FF;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #4a68c7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .service-row {
+                flex-direction: column; /* Stack cards vertically on smaller screens */
+            }
+
+            .service-card {
+                margin: 10px 0; /* Space between stacked cards */
+            }
+        }
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css"> <!-- Link to your main CSS file -->
     <link rel="stylesheet" href="service.css"> <!-- Link to your service-specific CSS file -->
 </head>
 <body>
 
-    <header class="section page-header">
-        <!-- RD Navbar-->
-        <div class="rd-navbar-wrap">
-          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+<header class="section page-header">
+    <!-- RD Navbar-->
+    <div class="rd-navbar-wrap">
+        <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
             <div class="rd-navbar-main-outer">
-              <div class="rd-navbar-main">
-                <!-- RD Navbar Panel-->
-                <div class="rd-navbar-panel">
-                  <!-- RD Navbar Toggle-->
-                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                  <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a class="brand" href="index.html"><img src="images/logo 1.png" alt="" width="223" height="50"/></a></div>
-                </div>
-                <div class="rd-navbar-main-element">
-                  <div class="rd-navbar-nav-wrap">
-                    <!-- RD Navbar Share-->
-                    <div class="rd-navbar-share fl-bigmug-line-share27" data-rd-navbar-toggle=".rd-navbar-share-list">
-                      <ul class="list-inline rd-navbar-share-list">
-                        <li class="rd-navbar-share-list-item"><a class="icon fa fa-facebook" href="#"></a></li>
-                        <li class="rd-navbar-share-list-item"><a class="icon fa fa-twitter" href="#"></a></li>
-                        <li class="rd-navbar-share-list-item"><a class="icon fa fa-google-plus" href="#"></a></li>
-                        <li class="rd-navbar-share-list-item"><a class="icon fa fa-instagram" href="#"></a></li>
-                      </ul>
+                <div class="rd-navbar-main">
+                    <!-- RD Navbar Panel-->
+                    <div class="rd-navbar-panel">
+                        <!-- RD Navbar Toggle-->
+                        <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                        <!-- RD Navbar Brand-->
+                        <div class="rd-navbar-brand"><a class="brand" href="index.html"><img src="images/logo 1.png" alt="" width="223" height="50"/></a></div>
                     </div>
-                    <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item "><a class="rd-nav-link" href="#home">Home</a></li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="#services">Services</a></li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="#projects">Projects</a></li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="#team">Team</a></li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="#news">News</a></li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="#contacts">Contacts</a></li>
-                    </ul>
-                  </div>
+                    <div class="rd-navbar-main-element">
+                        <div class="rd-navbar-nav-wrap">
+                            <!-- RD Navbar Share-->
+                            <div class="rd-navbar-share fl-bigmug-line-share27" data-rd-navbar-toggle=".rd-navbar-share-list">
+                                <ul class="list-inline rd-navbar-share-list">
+                                    <li class="rd-navbar-share-list-item"><a class="icon fa fa-facebook" href="#"></a></li>
+                                    <li class="rd-navbar-share-list-item"><a class="icon fa fa-twitter" href="#"></a></li>
+                                    <li class="rd-navbar-share-list-item"><a class="icon fa fa-google-plus" href="#"></a></li>
+                                    <li class="rd-navbar-share-list-item"><a class="icon fa fa-instagram" href="#"></a></li>
+                                </ul>
+                            </div>
+                            <ul class="rd-navbar-nav">
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="/index.html">Home</a></li>
+                                <li class="rd-nav-item active"><a class="rd-nav-link" href="#services">Services</a></li>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="#projects">Projects</a></li>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="#team">Team</a></li>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="#news">News</a></li>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="#contacts">Contacts</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </nav>
-        </div>
-      </header>
+        </nav>
+    </div>
+</header>
 
 <div class="container">
-    <div class="service">
-        <div class="icon">
-            <i class="fas fa-laptop-code"></i> <!-- Web Development Icon -->
+    <div class="service-row">
+        <div class="service-card">
+            <div class="icon">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+            <h2>Web Development</h2>
+            <p>Our web development services include building responsive and user-friendly websites using the latest technologies. We ensure optimal performance and seamless functionality across devices.</p>
+            <div class="buttons">
+                <a href="#" class="btn">Learn More</a>
+                <a href="#" class="btn">Get Started</a>
+            </div>
         </div>
-        <h2>Web Development</h2><br>
-        <p>Our web development services include building responsive and user-friendly websites using the latest technologies. We ensure optimal performance and seamless functionality across devices.</p>
-        <div class="buttons">
-            <a href="#" class="btn">Learn More</a>
-            <a href="#" class="btn">Get Started</a>
+
+        <div class="service-card">
+            <div class="icon">
+                <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h2>App Development</h2>
+            <p>We specialize in creating innovative mobile applications for both iOS and Android platforms. Our focus is on user experience and robust functionality to meet client needs.</p>
+            <div class="buttons">
+                <a href="#" class="btn">Learn More</a>
+                <a href="#" class="btn">Get Started</a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="icon">
+                <i class="fas fa-paint-brush"></i>
+            </div>
+            <h2>Graphic Design</h2>
+            <p>Our graphic design services provide visually appealing designs for branding, marketing materials, and more. We create graphics that effectively communicate your brand's message.</p>
+            <div class="buttons">
+                <a href="#" class="btn">Learn More</a>
+                <a href="#" class="btn">Get Started</a>
+            </div>
         </div>
     </div>
 
-    <div class="service">
-        <div class="icon">
-            <i class="fas fa-mobile-alt"></i> <!-- App Development Icon -->
+    <div class="service-row">
+        <div class="service-card">
+            <div class="icon">
+                <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <h2>UI/UX Design</h2>
+            <p>We offer UI/UX design services that focus on enhancing user satisfaction by improving usability and accessibility. Our designs create engaging experiences for your users.</p>
+            <div class="buttons">
+                <a href="#" class="btn">Learn More</a>
+                <a href="#" class="btn">Get Started</a>
+            </div>
         </div>
-        <h2>App Development</h2><br>
-        <p>We specialize in creating innovative mobile applications for both iOS and Android platforms. Our focus is on user experience and robust functionality to meet client needs.</p>
-        <div class="buttons">
-            <a href="#" class="btn">Learn More</a>
-            <a href="#" class="btn">Get Started</a>
-        </div>
-    </div>
 
-    <div class="service">
-        <div class="icon">
-            <i class="fas fa-paint-brush"></i> <!-- Graphic Design Icon -->
+        <div class="service-card">
+            <div class="icon">
+                <i class="fas fa-pencil-alt"></i>
+            </div>
+            <h2>Illustration</h2>
+            <p>We provide illustration services that enhance storytelling through visuals. Our illustrations can be used for books, marketing materials, and any project requiring artistic representation.</p>
+            <div class="buttons">
+                <a href="#" class="btn">Learn More</a>
+                <a href="#" class="btn">Get Started</a>
+            </div>
         </div>
-        <h2>Graphic Design</h2><br>
-        <p>Our graphic design services provide visually appealing designs for branding, marketing materials, and more. We create graphics that effectively communicate your brand's message.</p>
-        <div class="buttons">
-            <a href="#" class="btn">Learn More</a>
-            <a href="#" class="btn">Get Started</a>
-        </div>
-    </div>
 
-    <div class="service">
-        <div class="icon">
-            <i class="fas fa-tachometer-alt"></i> <!-- UI/UX Design Icon -->
-        </div>
-        <h2>UI/UX Design</h2><br>
-        <p>We offer UI/UX design services that focus on enhancing user satisfaction by improving usability and accessibility. Our designs create engaging experiences for your users.</p>
-        <div class="buttons">
-            <a href="#" class="btn">Learn More</a>
-            <a href="#" class="btn">Get Started</a>
-        </div>
-    </div>
-
- 
-
-    <div class="service">
-        <div class="icon">
-            <i class="fas fa-pencil-alt"></i> <!-- Illustration Icon -->
-        </div>
-        <h2>Illustration</h2><br>
-        <p>We provide illustration services that enhance storytelling through visuals. Our illustrations can be used for books, marketing materials, and any project requiring artistic representation.</p>
-        <div class="buttons">
-            <a href="#" class="btn">Learn More</a>
-            <a href="#" class="btn">Get Started</a>
-        </div>
-    </div>
-
-    <div class="service">
-        <div class="icon">
-            <i class="fas fa-bullhorn"></i> <!-- Digital Marketing Icon -->
-        </div>
-        <h2>Digital Marketing</h2><br>
-        <p>Our digital marketing strategies include SEO, social media marketing, and content marketing. We aim to increase your online presence and engage your target audience effectively.</p>
-        <div class="buttons">
-            <a href="#" class="btn">Learn More</a>
-            <a href="#" class="btn">Get Started</a>
+        <div class="service-card">
+            <div class="icon">
+                <i class="fas fa-bullhorn"></i>
+            </div>
+            <h2>Digital Marketing</h2>
+            <p>Our digital marketing strategies include SEO, social media marketing, and content marketing. We aim to increase your online presence and engage your target audience effectively.</p>
+            <div class="buttons">
+                <a href="#" class="btn">Learn More</a>
+                <a href="#" class="btn">Get Started</a>
+            </div>
         </div>
     </div>
 </div>
 
+<footer class="section footer-classic">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h5 class="footer-title">About Us</h5>
+                <p>Your company description goes here.</p>
+            </div>
+            <div class="col-lg-4">
+                <h5 class="footer-title">Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li>Phone: <a href="tel:+123456789">+1 (234) 567-89</a></li>
+                    <li>Email: <a href="mailto:info@nexvosys.com">info@nexvosys.com</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h5 class="footer-title">Follow Us</h5>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">Facebook</a></li>
+                    <li class="list-inline-item"><a href="#">Twitter</a></li>
+                    <li class="list-inline-item"><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
 <script src="js/core.min.js"></script>
 <script src="js/script.js"></script>
-
 </body>
 </html>

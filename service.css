@@ -1,93 +1,73 @@
-body {
-    font-family: 'Poppins', sans-serif; /* Ensure the font matches your homepage */
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 15px;
-}
-
 .container {
-    width: 90%; /* Increased width for better responsiveness */
-    max-width: 1200px; /* Max width to keep it neat on large screens */
+    width: 90%;
+    max-width: 1200px;
     margin: auto;
-    overflow: hidden;
     padding: 20px 0;
 }
 
-.service {
+.service-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Space between rows */
+}
+
+.service-card {
+    flex: 1; /* Each card takes equal space */
+    margin: 0 10px; /* Space between cards */
     background: #ffffff;
-    padding: 30px; /* Increased padding for larger div */
-    margin: 20px 0;
+    padding: 30px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align content in cards */
 }
 
-.icon {
-    font-size: 50px; /* Icon size */
-    color: #888; /* Neutral icon color */
-    transition: transform 0.3s; /* Animation for hover effect */
-    text-align: center; /* Center icon */
-    display: block; /* Make it a block-level element for centering */
-    margin: 0 auto; /* Center the icon horizontally */
+.service-card .icon {
+    font-size: 50px;
+    color: #888;
+    transition: transform 0.3s;
 }
 
-.icon:hover {
-    transform: scale(1.1); /* Scale up on hover */
+.service-card .icon:hover {
+    transform: scale(1.1);
 }
 
-.service h2 {
+.service-card h2 {
     color: #35424a;
-    margin-top: 10px; /* Ensure no extra margin at the top */
-    text-align: center; /* Center the title */
+    margin-top: 10px;
 }
 
-.service p {
-    margin: 10px 0; /* Space above and below paragraphs */
-    text-align: center; /* Center the description */
+.service-card p {
+    margin: 10px 0;
 }
 
 .buttons {
     margin-top: 15px;
-    display: flex; /* Use flexbox for buttons */
-    justify-content: center; /* Center buttons */
-    flex-direction: row; /* Ensure buttons are in a row */
+    display: flex;
+    justify-content: center;
 }
 
 .btn {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #6689FF; /* Button color matching the main theme */
-    color: #ffffff; /* Text color */
+    background-color: #6689FF;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
-    margin: 0 10px; /* Space between buttons */
-    transition: background-color 0.3s, color 0.3s; /* Include color transition */
+    margin: 0 10px;
+    transition: background-color 0.3s;
 }
 
 .btn:hover {
-    background-color: #4a68c7; /* Darker shade for hover effect */
-    color: #ffffff; /* Keep text color white on hover for better readability */
+    background-color: #4a68c7;
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .service {
-        margin: 10px; /* Reduce margin on small screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .icon {
-        font-size: 40px; /* Reduce icon size on very small screens */
+    .service-row {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
     }
 
-    .btn {
-        width: auto; /* Ensure buttons do not stretch */
+    .service-card {
+        margin: 10px 0; /* Space between stacked cards */
     }
 }
