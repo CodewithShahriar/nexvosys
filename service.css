@@ -53,5 +53,39 @@ nav a {
 
 .buttons {
     margin-top: 15px;
-  
+    display: flex; /* Use flexbox for buttons */
+    justify-content: center; /* Center buttons */
+    flex-direction: row; /* Ensure buttons are in a row */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #6689FF; /* Button color matching the main theme */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px; /* Space between buttons */
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #4a68c7; /* Darker shade for hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service {
+        margin: 10px; /* Reduce margin on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .icon {
+        font-size: 40px; /* Reduce icon size on very small screens */
+    }
+
+    .btn {
+        width: auto; /* Ensure buttons do not stretch */
+    }
 }
