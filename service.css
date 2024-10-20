@@ -23,6 +23,11 @@
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center; /* Center align content in cards */
+    transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Slight hover effect */
 }
 
 /* Icon styling */
@@ -59,17 +64,20 @@
 .btn {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #6689FF;
-    color: #ffffff;
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #6689FF; /* Blue outline */
+    color: #6689FF; /* Text color */
     text-decoration: none;
     border-radius: 5px;
     margin: 0 10px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s; /* Add transition for hover effects */
 }
 
 .btn:hover {
-    background-color: #4a68c7;
+    background-color: #6689FF; /* Dark blue background on hover */
+    color: #ffffff; /* Change text color to white on hover */
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -80,4 +88,37 @@
     .service-card {
         margin: 10px 0; /* Space between stacked cards */
     }
+}
+
+
+/* Learn More Button styling */
+.learn-more-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #6689FF; /* Blue outline */
+    color: #6689FF; /* Text color */
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s, color 0.3s; /* Add transition for hover effects */
+}
+
+
+
+
+/* Get Started Button styling */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #6689FF; /* Keep the original background */
+    color: #ffffff; /* Text color remains white */
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #4a68c7; /* Darker blue on hover */
 }
