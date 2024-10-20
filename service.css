@@ -1,0 +1,73 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Ensure the font matches your homepage */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #6689FF; /* Main theme color */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.service {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center the items vertically */
+}
+
+.icon {
+    margin-right: 15px; /* Space between icon and title */
+    transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.icon img {
+    width: 50px; /* Adjust icon size */
+    height: 50px; /* Adjust icon size */
+}
+
+.icon:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+.service h2 {
+    color: #35424a;
+}
+
+.buttons {
+    margin-top: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #6689FF; /* Button color matching the main theme */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #4a68c7; /* Darker shade for hover effect */
+}
