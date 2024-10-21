@@ -20229,3 +20229,20 @@ disabled look for disabled choices in the results dropdown
 }
 
 
+/* Border for form inputs */
+.form-wrap .form-input {
+    border: 1px solid #ccc; /* Adjust color as needed */
+    border-radius: 5px; /* Optional: for rounded corners */
+    padding: 10px; /* Optional: for better spacing */
+}
+
+/* Hover effect for the title */
+.title-classic-title h3 {
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.title-classic-title h3:hover {
+    color: blue; /* Change to your desired hover color */
+}
+
+
