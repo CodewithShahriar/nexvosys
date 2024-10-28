@@ -1,5 +1,7 @@
 // Function to handle signup
-document.querySelector('.auth-button-submit').addEventListener('click', function() {
+document.querySelector('.auth-button-submit').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
     const name = document.getElementById('signup-name').value;
     const email = document.getElementById('signup-email').value;
     const password = document.getElementById('signup-password').value;
@@ -37,8 +39,8 @@ function showLogoutButton() {
 // Function to handle logout
 function logout() {
     // Clear user data
-    localStorage.removeItem('userEmail');
-    localStorage.removeItem('userPassword');
+    // localStorage.removeItem('userEmail');
+    // localStorage.removeItem('userPassword');
     
     // Show signup and login buttons again
     const signupButton = document.querySelector('.auth-button-signup');
@@ -55,3 +57,26 @@ function logout() {
         logoutButton.parentElement.remove(); // Remove the logout button
     }
 }
+
+
+/// Function to handle login submission
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    const username = document.getElementById('login-username').value;
+    const password = document.getElementById('login-password').value;
+
+    // Check credentials (you can modify this to match your signup logic)
+    const storedEmail = localStorage.getItem('userEmail');
+    const storedPassword = localStorage.getItem('userPassword');
+
+    if (username === storedEmail && password === storedPassword) {
+        // Show logout button
+        showLogoutButton();
+        
+        // Close the modal
+        closeloginModal('loginModal');
+    } else {
+        alert('Log in failed. Invalid email or password.');
+    }
+});
