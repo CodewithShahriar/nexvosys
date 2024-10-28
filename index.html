@@ -71,12 +71,13 @@
                           <div class="modal-content">
                               <span class="close" onclick="closeSignupModal()">&times;</span>
                               <h2>Sign Up</h2>
-                              <input type="text" placeholder="Name" required>
-                              <input type="email" placeholder="Email" required>
-                              <input type="password" placeholder="Password" required>
-                              <button type="submit" class="auth-button-submit">Sign Up</button>
+                              <input type="text" id="signup-name" placeholder="Name" required>
+                              <input type="email" id="signup-email" placeholder="Email" required>
+                              <input type="password" id="signup-password" placeholder="Password" required>
+                              <button type="submit" class="auth-button-submit" >Sign Up</button>
                           </div>
                       </div>
+                      
                         <!-- <div id="LoginModal" class="modal">
                           <div class="modal-content">
                               <span class="close" onclick="closeLoginModal()">&times;</span>
@@ -596,6 +597,7 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
     <!-- coded by Himic-->
   </body>
 </html>

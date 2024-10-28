@@ -20363,3 +20363,13 @@ disabled look for disabled choices in the results dropdown
     background-color: #3559d4;
     color: white;
 }
+
+
+.auth-button-logout {
+    background-color: #6689FF; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+}
