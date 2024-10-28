@@ -59,11 +59,41 @@
                         <li class="rd-nav-item"><a class="rd-nav-link" href="#contacts">Contacts</a></li>
                       </ul>
                       <div class="rd-navbar-auth-buttons">
-                        <a href="/signup.html" class="auth-button-signup">Sign Up</a>
-                        <a href="/login.html" class="auth-button-login">Log In</a>
+                        <a href="#" class="auth-button-signup" onclick="showSignupModal()">Sign Up</a>
+                        <a href="#" class="auth-button-login" onclick="showLoginModal()">Log In</a>
                       </div>
                       
                       
+                      <!-- auth form -->
+                       
+                        <!-- Signup Modal -->
+                      <div id="signupModal" class="modal">
+                        <div class="modal-content">
+                          <span class="close" onclick="closeModal('signupModal')">&times;</span>
+                          <h2>Sign Up</h2>
+                          <form id="signupForm">
+                            <input type="text" placeholder="Full Name" required>
+                            <input type="email" placeholder="Email" required>
+                            <input type="password" placeholder="Password" required>
+                            <button type="submit">Sign Up</button>
+                          </form>
+                        </div>
+                      </div>
+
+                      <!-- Login Modal -->
+                      <div id="loginModal" class="modal">
+                        <div class="modal-content">
+                          <span class="close" onclick="closeModal('loginModal')">&times;</span>
+                          <h2>Log In</h2>
+                          <form id="loginForm">
+                            <input type="text" placeholder="Email/Username" required>
+                            <input type="password" placeholder="Password" required>
+                            <button type="submit">Log In</button>
+                          </form>
+                        </div>
+                      </div>
+
+
                     </div>
                   </div>
                 </div>
