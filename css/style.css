@@ -20264,24 +20264,26 @@ disabled look for disabled choices in the results dropdown
 	background-color: #6689FF;
 	color: white;
 	border: none;
+	padding: 9px 10px;
   }
   
   .auth-button-login {
 	background-color: white;
 	color: #6689FF;
-	border: 2px solid #6689FF;
+	border: 1px solid #6689FF;
   }
   /* Signup Button Hover */
 .auth-button-signup:hover {
-    background-color: black;
+    background-color: #3559d4;
     color: white;
+	
 }
 
 /* Login Button Hover */
-.auth-button-login:hover {
-    background-color: blue;
-    color: white;
-}
+/* .auth-button-login:hover {
+    background-color: #d2d9d8;
+    
+} */
 
   
 .modal {
@@ -20358,5 +20360,6 @@ disabled look for disabled choices in the results dropdown
 }
 
 .modal .auth-button-submit:hover {
-    background-color: black; /* Change to black on hover */
+    background-color: #3559d4;
+    color: white;
 }

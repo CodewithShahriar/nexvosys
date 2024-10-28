@@ -1458,3 +1458,10 @@ function showSignupModal() {
 function closeSignupModal() {
     document.getElementById('signupModal').style.display = 'none';
 }
+function showloginModal() {
+    document.getElementById('loginModal').style.display = 'block';
+}
+
+function closeloginModal() {
+    document.getElementById('loginModal').style.display = 'none';
+}

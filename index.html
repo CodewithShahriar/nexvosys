@@ -60,7 +60,7 @@
                       </ul>
                       <div class="rd-navbar-auth-buttons">
                         <a href="#" class="auth-button-signup" onclick="showSignupModal()">Sign Up</a>
-                        <a href="#" class="auth-button-login" onclick="showLoginModal()">Log In</a>
+                        <a href="#" class="auth-button-login" onclick="showloginModal()">Log In</a>
                       </div>
                       
                       
@@ -77,17 +77,27 @@
                               <button type="submit" class="auth-button-submit">Sign Up</button>
                           </div>
                       </div>
+                        <!-- <div id="LoginModal" class="modal">
+                          <div class="modal-content">
+                              <span class="close" onclick="closeLoginModal()">&times;</span>
+                              <h2>Log In</h2>
+                              
+                              <input type="email" placeholder="Email" required>
+                              <input type="password" placeholder="Password" required>
+                              <button type="submit" class="auth-button-submit">Log in</button>
+                          </div>
+                      </div> -->
                       
 
                       <!-- Login Modal -->
                       <div id="loginModal" class="modal">
                         <div class="modal-content">
-                          <span class="close" onclick="closeModal('loginModal')">&times;</span>
+                          <span class="close" onclick="closeloginModal('loginModal')">&times;</span>
                           <h2>Log In</h2>
                           <form id="loginForm">
                             <input type="text" placeholder="Email/Username" required>
                             <input type="password" placeholder="Password" required>
-                            <button type="submit">Log In</button>
+                            <button type="submit" class="auth-button-login">Log In</button>
                           </form>
                         </div>
                       </div>
