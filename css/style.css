@@ -20246,3 +20246,41 @@ disabled look for disabled choices in the results dropdown
 }
 
 
+
+.rd-navbar-auth-buttons {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	margin-left: 15px;
+  }
+  
+  .auth-button-signup, .auth-button-login {
+	padding: 8px 14px;
+	font-size: 14px;
+	border-radius: 4px;
+  }
+  
+  .auth-button-signup {
+	background-color: #6689FF;
+	color: white;
+	border: none;
+  }
+  
+  .auth-button-login {
+	background-color: white;
+	color: #6689FF;
+	border: 2px solid #6689FF;
+  }
+  /* Signup Button Hover */
+.auth-button-signup:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Login Button Hover */
+.auth-button-login:hover {
+    background-color: blue;
+    color: white;
+}
+
+  
