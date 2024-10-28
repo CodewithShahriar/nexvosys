@@ -20285,25 +20285,42 @@ disabled look for disabled choices in the results dropdown
 
   
 .modal {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgb(0, 0, 0);
-	background-color: rgba(0, 0, 0, 0.4);
-  }
+    display: none;
+    justify-content: center;
+    z-index: 1000; /* Ensure it's on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Slightly transparent background */
+}
+
   
-  .modal-content {
-	background-color: #fefefe;
-	margin: 15% auto;
-	padding: 20px;
-	border: 1px solid #888;
-	width: 80%;
-  }
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* Adjust width as needed */
+    max-width: 400px; /* Maximum width */
+    margin: auto; /* Center horizontally */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	top: 250px;
+}
+
+
+.form-wrap {
+    margin-bottom: 15px; /* Adjust margin between fields */
+}
+
+.form-input {
+    font-size: 14px; /* Make input text smaller */
+    padding: 10px; /* Adjust padding inside inputs */
+}
   
   .close {
 	color: #aaa;
@@ -20319,3 +20336,27 @@ disabled look for disabled choices in the results dropdown
 	cursor: pointer;
   }
   
+  .modal input[type="text"],
+  .modal input[type="email"],
+  .modal input[type="password"],
+  .modal textarea {
+	  padding: 10px; /* Padding for input fields */
+	  width: 100%; /* Full width */
+	  box-sizing: border-box; /* Include padding in width */
+	  margin-bottom: 15px; /* Gap below each input field */
+  }
+  
+  .modal .auth-button-submit {
+    background-color: #6689FF; /* Blue color */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    text-align: center; /* Center text */
+    width: 100%; /* Full width */
+}
+
+.modal .auth-button-submit:hover {
+    background-color: black; /* Change to black on hover */
+}

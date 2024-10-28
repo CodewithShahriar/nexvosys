@@ -67,18 +67,17 @@
                       <!-- auth form -->
                        
                         <!-- Signup Modal -->
-                      <div id="signupModal" class="modal">
-                        <div class="modal-content">
-                          <span class="close" onclick="closeModal('signupModal')">&times;</span>
-                          <h2>Sign Up</h2>
-                          <form id="signupForm">
-                            <input type="text" placeholder="Full Name" required>
-                            <input type="email" placeholder="Email" required>
-                            <input type="password" placeholder="Password" required>
-                            <button type="submit">Sign Up</button>
-                          </form>
-                        </div>
+                        <div id="signupModal" class="modal">
+                          <div class="modal-content">
+                              <span class="close" onclick="closeSignupModal()">&times;</span>
+                              <h2>Sign Up</h2>
+                              <input type="text" placeholder="Name" required>
+                              <input type="email" placeholder="Email" required>
+                              <input type="password" placeholder="Password" required>
+                              <button type="submit" class="auth-button-submit">Sign Up</button>
+                          </div>
                       </div>
+                      
 
                       <!-- Login Modal -->
                       <div id="loginModal" class="modal">

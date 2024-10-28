@@ -1451,11 +1451,10 @@
 	} );
 }());
 
-function openModal(modalId) {
-	document.getElementById(modalId).style.display = "block";
-  }
-  
-  function closeModal(modalId) {
-	document.getElementById(modalId).style.display = "none";
-  }
-  
+function showSignupModal() {
+    document.getElementById('signupModal').style.display = 'block';
+}
+
+function closeSignupModal() {
+    document.getElementById('signupModal').style.display = 'none';
+}
