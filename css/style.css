@@ -20373,3 +20373,79 @@ disabled look for disabled choices in the results dropdown
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor */
 }
+
+/* footer */
+footer {
+	background-color: #0055FF;
+	color: #fff;
+	padding-top: 20px;
+	font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+  }
+  
+  .footer-section {
+    text-align: left; /* Align text to the left */
+    padding: 0;      /* Remove any padding */
+    margin: 0;       /* Remove any margin */
+}
+  .footer-section h2{
+    color: white;      
+}
+  .footer-section h3{
+    color: white;
+	margin-top: 15px;
+	padding-bottom: 15px;
+	font-size: 25px;
+}
+
+.footer-section h2, .footer-section h3, .footer-section p {
+    margin-left: 0;  /* Ensure no left margin on headings and paragraphs */
+	color: white;
+}
+
+.footer-section .social-icons {
+    display: flex;    /* Use flexbox for alignment */
+    gap: 10px;       /* Space between icons */
+    margin-top: 10px; /* Add some top margin for separation */
+}
+
+.footer-section .social-icons a {
+    color: #fff;     /* Icon color */
+    text-decoration: none; /* No underline on icons */
+}
+
+
+  
+  .social-icons a {
+	display: inline-block;
+	margin-right: 10px;
+	color: #fff;
+	font-size: 16px;
+	text-decoration: none;
+  }
+  
+
+  .footer-section ul li {
+	margin-bottom: 5px;
+  }
+  .footer-section ul li a {
+	color: #fff;
+	text-decoration: none;
+  }
+  .footer-section ul li a:hover {
+	text-decoration: underline;
+  }
+
+  .footer-bottom {
+	text-align: center;
+	padding: 10px 0;
+	font-size: 14px;
+	background-color: #043db0; /* Darker shade for bottom section */
+  }
