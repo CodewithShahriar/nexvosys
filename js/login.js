@@ -1,12 +1,23 @@
-// Function to handle signup
 document.querySelector('.auth-button-submit').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault();
 
     const name = document.getElementById('signup-name').value;
     const email = document.getElementById('signup-email').value;
     const password = document.getElementById('signup-password').value;
+    const termsCheckbox = document.getElementById('termsCheckbox');
 
-    // Store user data
+    // Check if all fields are filled and terms are accepted
+    if (!name || !email || !password) {
+        alert("Please fill out all fields.");
+        return;
+    }
+
+    if (!termsCheckbox.checked) {
+        alert("Please agree to the terms and conditions.");
+        return;
+    }
+
+    // Continue with form submission
     localStorage.setItem('userEmail', email);
     localStorage.setItem('userPassword', password);
 
@@ -16,6 +27,7 @@ document.querySelector('.auth-button-submit').addEventListener('click', function
     // Close the modal
     closeSignupModal();
 });
+
 
 // Function to show the logout button
 function showLogoutButton() {
@@ -85,3 +97,16 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 function forgotPassword() {
     alert("Password reset instructions will be sent to your email.");
 }
+
+
+// document.querySelector('.auth-button-submit').addEventListener('click', function(event) {
+//     event.preventDefault();
+
+//     const termsCheckbox = document.getElementById('termsCheckbox');
+//     if (!termsCheckbox.checked) {
+//         alert("Please agree to the terms and conditions.");
+//         return;
+//     }
+
+//     // Rest of your signup code here
+// });
