@@ -80,3 +80,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         alert('Log in failed. Invalid email or password.');
     }
 });
+
+
+function forgotPassword() {
+    alert("Password reset instructions will be sent to your email.");
+}

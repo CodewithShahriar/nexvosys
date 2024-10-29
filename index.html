@@ -71,7 +71,7 @@
                           <div class="modal-content">
                               <span class="close" onclick="closeSignupModal()">&times;</span>
                               <h2>Sign Up</h2>
-                              <input type="text" id="signup-name" placeholder="Name" required>
+                              <input type="text" id="signup-name" placeholder="Username" required>
                               <input type="email" id="signup-email" placeholder="Email" required>
                               <input type="password" id="signup-password" placeholder="Password" required>
                               <button type="submit" class="auth-button-submit">Sign Up</button>
@@ -99,6 +99,8 @@
                             <form id="loginForm">
                                 <input type="text" id="login-username" placeholder="Email/Username" required>
                                 <input type="password" id="login-password" placeholder="Password" required>
+                                <a href="#" onclick="forgotPassword()" style="color: #6689FF; display: block; margin-top: 5px; margin-bottom: 5px;">Forgot Password?</a>
+
                                 <button type="submit" class="auth-button-submit">Log In</button>
                             </form>
                         </div>
