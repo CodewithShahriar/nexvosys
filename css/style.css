@@ -20284,6 +20284,34 @@ disabled look for disabled choices in the results dropdown
     background-color: #d2d9d8;
     
 } */
+ /* Responsive design for the terms and conditions checkbox */
+/* Responsive design for terms and conditions checkbox */
+.terms-label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+    text-align: left; /* Align text to the left */
+    line-height: 1.4; /* Adjust line height */
+	margin-left: 5px;
+}
+
+.terms-link {
+	
+    color: #6689FF;
+}
+
+@media (max-width: 576px) {
+    .terms-label {
+		margin-top: 2px;
+        font-size: 12px;
+        line-height: 1.2; /* Reduce line height for mobile */
+
+    }
+}
+
+
 
   
 .modal {
