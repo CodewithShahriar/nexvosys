@@ -15269,12 +15269,13 @@ html.rd-navbar-fixed-linked .page-header {
 .swiper-slide-caption {
 	width: 100%;
 	white-space: normal;
-	
+	padding-top: 270px;
 }
 
 @media (max-width: 767px) {
 	.swiper-slide-caption {
-		padding-bottom: 80px;
+		padding-top: 45px;
+		padding-bottom: 70px;
 	}
 }
 
