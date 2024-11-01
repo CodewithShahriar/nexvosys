@@ -15269,6 +15269,7 @@ html.rd-navbar-fixed-linked .page-header {
 .swiper-slide-caption {
 	width: 100%;
 	white-space: normal;
+	
 }
 
 @media (max-width: 767px) {
@@ -20597,3 +20598,6 @@ footer {
 	padding-top: 150px;
 }
 
+.swiper-slider {
+    margin-top: 50px; /* Adjust this value as needed */
+}
