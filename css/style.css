@@ -20251,7 +20251,8 @@ disabled look for disabled choices in the results dropdown
 	display: flex;
 	gap: 10px;
 	align-items: center;
-	margin-left: 15px;
+	margin-left: 25px;
+	
   }
   
   .auth-button-signup, .auth-button-login {
@@ -20507,3 +20508,34 @@ footer {
         font-size: 12px;
     }
 }
+
+
+.video-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+  }
+  
+  .video-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 255, 0.4); /* Blue shadow with 40% opacity */
+	z-index: 0;
+  }
+  
+  .text-black {
+	color: white; /* Set text color to black */
+  }
+  
+  .swiper-slide-caption {
+	position: relative;
+	z-index: 1; /* Place text and button above the overlay and video */
+  }
+  
