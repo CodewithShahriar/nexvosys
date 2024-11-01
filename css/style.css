@@ -20539,7 +20539,7 @@ footer {
   
   .swiper-slide-caption {
 	position: relative;
-	z-index: 1; /* Place text and button above the overlay and video */
+	z-index: 1; 
   }
   
   .cta-button {
@@ -20599,6 +20599,3 @@ footer {
 	padding-top: 150px;
 }
 
-.swiper-slider {
-    margin-top: 50px; /* Adjust this value as needed */
-}
