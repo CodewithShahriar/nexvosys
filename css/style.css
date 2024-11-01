@@ -20540,3 +20540,54 @@ footer {
 	z-index: 1; /* Place text and button above the overlay and video */
   }
   
+  .cta-button {
+	background-color: #FFD700; /* Bright yellow for contrast */
+	color: #000; /* Black text for readability */
+	border: none;
+	padding: 15px 20px;
+	font-weight: bold;
+	border-radius: 5px; /* Rounded corners */
+	/* transition: background-color 0.3s ease; */
+	margin-top: 20px; /* Add gap above button */
+  }
+  
+  /* .cta-button:hover {
+	background-color: #FFC300; 
+  } */
+  
+
+  .button-ujaraks {
+	position: relative;
+	z-index: 0;
+	transition: background 0.4s, border-color 0.4s, color 0.4s;
+}
+
+.button-ujaraks::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 101%;
+	height: 101%;
+	background: black;
+	z-index: -1;
+	opacity: 0;
+	transform: scale3d(0.7, 1, 1);
+	transition: transform 0.42s, opacity 0.42s;
+	border-radius: inherit;
+}
+
+.button-ujaraks,
+.button-ujaraks::before {
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.button-ujaraks:hover {
+	transition: background 0.4s 0.4s, border-color 0.4s 0s, color 0.2s 0s;
+	color: white; /* Change text color to white on hover */
+}
+
+.button-ujaraks:hover::before {
+	opacity: 1;
+	transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+}
