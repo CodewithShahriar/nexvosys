@@ -15034,7 +15034,7 @@ html.rd-navbar-fixed-linked .page-header {
 	bottom: 0;
 	left: 0;
 	background: #ffffff;
-	transition: inherit;
+	/* transition: inherit; */
 	z-index: -1;
 }
 
@@ -15046,7 +15046,7 @@ html.rd-navbar-fixed-linked .page-header {
 .swiper-button-prev:hover::after,
 .swiper-button-next:hover::after {
 	border-radius: 50%;
-	background: #6689ff;
+	/* background: #6689ff; */
 }
 
 @media (min-width: 768px) {
@@ -20598,4 +20598,6 @@ footer {
 .whatweoffer{
 	padding-top: 150px;
 }
+
+
 
