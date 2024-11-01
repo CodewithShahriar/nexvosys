@@ -20475,6 +20475,13 @@ footer {
     background-color: #043db0;
 }
 
+.footer-section p {
+    
+	margin: 5px 0; /* Base spacing for all screens */
+    font-size: 14px;
+    line-height: 1.4;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 576px) {
     .footer-container {
@@ -20485,6 +20492,8 @@ footer {
     .footer-section h2, .footer-section h3 {
         font-size: 15px;
     }
+
+	
 
     .footer-section p, .footer-section ul li {
         font-size: 12px;
