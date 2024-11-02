@@ -1,3 +1,22 @@
+function showSignupModal() {
+    document.getElementById('signupModal').style.display = 'block';
+}
+
+function closeSignupModal() {
+    document.getElementById('signupModal').style.display = 'none';
+}
+function showloginModal() {
+    document.getElementById('loginModal').style.display = 'block';
+}
+
+function closeloginModal() {
+    document.getElementById('loginModal').style.display = 'none';
+}
+
+
+
+
+
 document.querySelector('.auth-button-submit').addEventListener('click', function(event) {
     event.preventDefault();
 
