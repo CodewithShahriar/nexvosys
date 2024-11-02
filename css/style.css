@@ -20601,3 +20601,21 @@ footer {
 
 
 
+/* meet the team */
+/* Custom styles to improve the visibility of the team members */
+        .team-member {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px; /* Add padding around members */
+        }
+    
+        .team-classic-figure img {
+            width: 100%; /* Ensure the image fills the container */
+            height: auto; /* Maintain aspect ratio */
+            max-height: 300px; /* Limit max height to improve visibility */
+        }
+    
+        .team-classic-caption {
+            text-align: center; /* Center the text */
+        }
