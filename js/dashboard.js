@@ -76,15 +76,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer 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` // Replace YOUR_API_KEY with your actual API key
+                    'Authorization': `Bearer YOUR_API_KEY` // Replace YOUR_API_KEY with your actual API key
                 },
                 body: JSON.stringify({
-                    model: "gpt-3.5-turbo",
-                    messages: [
-                        { role: "user", content: userMessage }
-                    ]
+                    model: "gpt-3.5-turbo", // Model to use
+                    messages: [{ role: "user", content: userMessage }]
                 })
-                
             });
 
             const data = await response.json();
