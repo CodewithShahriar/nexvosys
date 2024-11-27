@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Overview</title>
+    <link rel="stylesheet" href="overview.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Hiring Staff</h2>
+            <ul>
+                <li class="active"><a href="#">Overview</a></li>
+                <li><a href="#">Post Job</a></li>
+                <li><a href="#">Posted Jobs</a></li>
+                <li><a href="#">Shortlisted</a></li>
+                <li><a href="#">Interview</a></li>
+                <li><a href="#">Recruiter Profile</a></li>
+                <li><a href="#">My Payments</a></li>
+                <li><a href="#">AI Assistant</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sign out</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1>Recruiter Analytics</h1>
+            <div class="breadcrumbs">Home > Dashboard > Overview</div>
+
+            <!-- Stats Cards -->
+            <div class="stats-container">
+                <div class="stat-card yellow">
+                    <div class="stat-icon">📄</div>
+                    <div class="stat-info">
+                        <h2>8</h2>
+                        <p>My Jobs</p>
+                    </div>
+                </div>
+                <div class="stat-card red">
+                    <div class="stat-icon">📩</div>
+                    <div class="stat-info">
+                        <h2>1</h2>
+                        <p>Total Applications</p>
+                    </div>
+                </div>
+                <div class="stat-card blue">
+                    <div class="stat-icon">💬</div>
+                    <div class="stat-info">
+                        <h2>43</h2>
+                        <p>Total Messages</p>
+                    </div>
+                </div>
+                <div class="stat-card purple">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-info">
+                        <h2>0</h2>
+                        <p>Shortlisted</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bar Chart -->
+            <div class="chart-container">
+                <h2>Performance Overview</h2>
+                <canvas id="performanceChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="overview.js"></script>
+</body>
+</html>

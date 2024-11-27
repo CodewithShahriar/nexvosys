@@ -1,111 +1,101 @@
-// JavaScript for sidebar menu interactions and dynamic content loading
-document.addEventListener('DOMContentLoaded', function() {
-    // Select all sidebar links
-    const sidebarLinks = document.querySelectorAll('.sidebar .menu li a');
-    const contentSection = document.getElementById('contentSection');
+document.addEventListener('DOMContentLoaded', function () {
+    const sidebarItems = document.querySelectorAll('.sidebar ul li');
+    const contentArea = document.getElementById('content-area');
 
-    // Function to update active link
-    function updateActiveLink(target) {
-        sidebarLinks.forEach(link => {
-            link.classList.remove('active');
-        });
-        target.classList.add('active');
-    }
+    sidebarItems.forEach((item) => {
+        item.addEventListener('click', function () {
+            // Remove 'active' class from all items
+            sidebarItems.forEach((el) => el.classList.remove('active'));
+            // Add 'active' class to clicked item
+            this.classList.add('active');
 
-    // Event listener for sidebar links
-    sidebarLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            updateActiveLink(event.target);
-            loadContent(event.target.id);
+            // Load appropriate content
+            const section = this.getAttribute('data-section');
+            loadContent(section);
         });
     });
 
-    // Function to dynamically load content based on the clicked link
-    function loadContent(sectionId) {
+    function loadContent(section) {
         let contentHTML = '';
-
-        switch (sectionId) {
+        switch (section) {
             case 'overview':
-                contentHTML = `
-                    <div class="cards">
-                        <div class="card yellow">
-                            <h3>8</h3>
-                            <p>My Jobs</p>
-                        </div>
-                        <div class="card red">
-                            <h3>1</h3>
-                            <p>Total Applications</p>
-                        </div>
-                        <div class="card green">
-                            <h3>43</h3>
-                            <p>Total Messages</p>
-                        </div>
-                        <div class="card purple">
-                            <h3>0</h3>
-                            <p>Shortlisted</p>
-                        </div>
-                    </div>
-                    <div class="chart">
-                        <h3>Performance Chart</h3>
-                        <div class="chart-placeholder">Chart Placeholder</div>
-                    </div>
-                `;
-                break;
-            case 'postJob':
-                contentHTML = `<h2>Post a new job</h2>`;
-                break;
-            case 'postedJobs':
-                contentHTML = `<h2>View posted jobs</h2>`;
-                break;
-            case 'shortlisted':
-                contentHTML = `<h2>View shortlisted candidates</h2>`;
-                break;
-            case 'interview':
-                contentHTML = `<h2>Manage interviews</h2>`;
-                break;
-            case 'recruiterProfile':
-                contentHTML = `<h2>Edit recruiter profile</h2>`;
-                break;
-            case 'myPayments':
-                contentHTML = `<h2>My payment details</h2>`;
+                contentHTML = `<h2>Overview</h2><p>Overview content goes here.</p>`;
                 break;
             case 'aiAssistant':
-                contentHTML = `<h2>AI Assistant</h2>`;
-                break;
-            case 'home':
-                contentHTML = `<h2>Home Dashboard</h2>`;
+                contentHTML = `
+                    <div class="ai-assistant">
+                        <h2><span class="icon">🤖</span> AI Assistant</h2>
+                        <div class="chatbox">
+                            <div id="chatDisplay" class="chat-display"></div>
+                            <div class="chat-input">
+                                <input type="text" id="userInput" placeholder="Ask me anything..." />
+                                <button id="sendBtn">Generate <span>➤</span></button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                setTimeout(() => {
+                    const chatDisplay = document.getElementById('chatDisplay');
+                    const userInput = document.getElementById('userInput');
+                    const sendBtn = document.getElementById('sendBtn');
+
+                    sendBtn.addEventListener('click', () => {
+                        const message = userInput.value.trim();
+                        if (message) {
+                            appendMessage(chatDisplay, 'user', message);
+                            userInput.value = '';
+                            getAIResponse(chatDisplay, message);
+                        }
+                    });
+
+                    userInput.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter') sendBtn.click();
+                    });
+                }, 100);
                 break;
             default:
-                contentHTML = `<h2>Welcome to the dashboard!</h2>`;
+                contentHTML = `<h2>${section}</h2><p>${section} content goes here.</p>`;
         }
 
-        contentSection.innerHTML = contentHTML;
+        contentArea.innerHTML = contentHTML;
     }
 
-    // Initialize with Overview as default section
-    loadContent('overview');
+    function appendMessage(container, sender, message) {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add(`${sender}-message`);
+        messageDiv.textContent = message;
+        container.appendChild(messageDiv);
+        container.scrollTop = container.scrollHeight;
+    }
 
-    // Sign Out action
-    const logoutButton = document.getElementById('logout');
-    logoutButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        alert('You have signed out.');
-    });
+    async function getAIResponse(container, userMessage) {
+        appendMessage(container, 'ai', 'Thinking...');
+        try {
+            const response = await fetch('https://api.openai.com/v1/chat/completions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer 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` // Replace YOUR_API_KEY with your actual API key
+                },
+                body: JSON.stringify({
+                    model: "gpt-3.5-turbo",
+                    messages: [
+                        { role: "user", content: userMessage }
+                    ]
+                })
+                
+            });
+
+            const data = await response.json();
+            const aiReply = data.choices[0].message.content;
+
+            // Add AI response to chat
+            appendMessage(container, 'ai', aiReply);
+
+        } catch (error) {
+            appendMessage(container, 'ai', 'Sorry, there was an error connecting to the AI.');
+            console.error('Error:', error);
+        }
+    }
 });
-
-
-case 'aiAssistant';
-    contentHTML = `
-        <div class="ai-assistant">
-            <h2><span class="icon">🤖</span> AI Assistant</h2>
-            <div class="chatbox">
-                <div id="chatDisplay" class="chat-display"></div>
-                <div class="chat-input">
-                    <input type="text" id="userInput" placeholder="Ask me anything..." />
-                    <button id="sendBtn">Generate <span>➤</span></button>
-                </div>
-            </div>
-        </div>
-    `;
-    break;

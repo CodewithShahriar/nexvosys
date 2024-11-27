@@ -4,65 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
-    <div class="dashboard">
+    <div class="container">
         <!-- Sidebar -->
         <div class="sidebar">
-            <div class="logo">
-                <h2>Hiring Staff</h2>
-            </div>
-            <ul class="menu">
-                <li><a href="#" class="active" id="overview">Overview</a></li>
-                <li><a href="#" id="postJob">Post Job</a></li>
-                <li><a href="#" id="postedJobs">Posted Jobs</a></li>
-                <li><a href="#" id="shortlisted">Shortlisted</a></li>
-                <li><a href="#" id="interview">Interview</a></li>
-                <li><a href="#" id="recruiterProfile">Recruiter Profile</a></li>
-                <li><a href="#" id="myPayments">My Payments</a></li>
-                <li><a href="#" id="aiAssistant">AI Assistant</a></li>
-                <li><a href="#" id="home">Home</a></li>
-                <li><a href="#" class="logout" id="logout">Sign Out</a></li>
+            <h2>Admin Dashboard</h2>
+            <ul>
+                <li data-section="overview" class="active">Overview</li>
+                <li data-section="postJob">Post Job</li>
+                <li data-section="postedJobs">Posted Jobs</li>
+                <li data-section="shortlisted">Shortlisted</li>
+                <li data-section="interview">Interview</li>
+                <li data-section="recruiterProfile">Recruiter Profile</li>
+                <li data-section="myPayments">My Payments</li>
+                <li data-section="aiAssistant">AI Assistant</li>
+                <li data-section="home">Home</li>
+                <li data-section="logout" class="logout">Sign out</li>
             </ul>
         </div>
 
         <!-- Main Content -->
         <div class="main-content">
-            <header>
-                <h2>Recruiter Analytics</h2>
-                <p>Home > Dashboard > Dashboard Main</p>
-            </header>
-
-            <div id="contentSection">
-                <!-- Dynamic content will be loaded here based on the sidebar selection -->
-                <div class="cards">
-                    <div class="card yellow">
-                        <h3>8</h3>
-                        <p>My Jobs</p>
-                    </div>
-                    <div class="card red">
-                        <h3>1</h3>
-                        <p>Total Applications</p>
-                    </div>
-                    <div class="card green">
-                        <h3>43</h3>
-                        <p>Total Messages</p>
-                    </div>
-                    <div class="card purple">
-                        <h3>0</h3>
-                        <p>Shortlisted</p>
-                    </div>
-                </div>
-
-                <div class="chart">
-                    <h3>Performance Chart</h3>
-                    <div class="chart-placeholder"></div>
-                </div>
+            <div id="content-area">
+                <h2>Welcome to the Dashboard!</h2>
+                <p>Click on the sidebar options to navigate.</p>
             </div>
         </div>
     </div>
-
-    <script src="/js/dashboard.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 </html>
