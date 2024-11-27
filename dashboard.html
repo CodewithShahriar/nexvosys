@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h2>Hiring Staff</h2>
+            </div>
+            <ul class="menu">
+                <li><a href="#" class="active" id="overview">Overview</a></li>
+                <li><a href="#" id="postJob">Post Job</a></li>
+                <li><a href="#" id="postedJobs">Posted Jobs</a></li>
+                <li><a href="#" id="shortlisted">Shortlisted</a></li>
+                <li><a href="#" id="interview">Interview</a></li>
+                <li><a href="#" id="recruiterProfile">Recruiter Profile</a></li>
+                <li><a href="#" id="myPayments">My Payments</a></li>
+                <li><a href="#" id="aiAssistant">AI Assistant</a></li>
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#" class="logout" id="logout">Sign Out</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h2>Recruiter Analytics</h2>
+                <p>Home > Dashboard > Dashboard Main</p>
+            </header>
+
+            <div id="contentSection">
+                <!-- Dynamic content will be loaded here based on the sidebar selection -->
+                <div class="cards">
+                    <div class="card yellow">
+                        <h3>8</h3>
+                        <p>My Jobs</p>
+                    </div>
+                    <div class="card red">
+                        <h3>1</h3>
+                        <p>Total Applications</p>
+                    </div>
+                    <div class="card green">
+                        <h3>43</h3>
+                        <p>Total Messages</p>
+                    </div>
+                    <div class="card purple">
+                        <h3>0</h3>
+                        <p>Shortlisted</p>
+                    </div>
+                </div>
+
+                <div class="chart">
+                    <h3>Performance Chart</h3>
+                    <div class="chart-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
