@@ -93,3 +93,19 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('You have signed out.');
     });
 });
+
+
+case 'aiAssistant';
+    contentHTML = `
+        <div class="ai-assistant">
+            <h2><span class="icon">🤖</span> AI Assistant</h2>
+            <div class="chatbox">
+                <div id="chatDisplay" class="chat-display"></div>
+                <div class="chat-input">
+                    <input type="text" id="userInput" placeholder="Ask me anything..." />
+                    <button id="sendBtn">Generate <span>➤</span></button>
+                </div>
+            </div>
+        </div>
+    `;
+    break;
