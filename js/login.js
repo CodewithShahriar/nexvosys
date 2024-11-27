@@ -118,14 +118,3 @@ function forgotPassword() {
 }
 
 
-// document.querySelector('.auth-button-submit').addEventListener('click', function(event) {
-//     event.preventDefault();
-
-//     const termsCheckbox = document.getElementById('termsCheckbox');
-//     if (!termsCheckbox.checked) {
-//         alert("Please agree to the terms and conditions.");
-//         return;
-//     }
-
-//     // Rest of your signup code here
-// });

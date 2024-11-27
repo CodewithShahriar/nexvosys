@@ -1,6 +1,63 @@
 document.addEventListener('DOMContentLoaded', function () {
     const sidebarItems = document.querySelectorAll('.sidebar ul li');
     const contentArea = document.getElementById('content-area');
+    const ctx = document.getElementById('activityChart').getContext('2d');
+
+    const data = {
+        labels: ['Job Posted', 'Shortlisted', 'Interviews', 'Payments'],
+        datasets: [{
+            label: 'Overview Stats',
+            data: [56, 43, 12, 25000],
+            backgroundColor: [
+                'rgba(26, 115, 232, 0.7)',
+                'rgba(26, 115, 232, 0.7)',
+                'rgba(26, 115, 232, 0.7)',
+                'rgba(26, 115, 232, 0.7)'
+            ],
+            borderColor: [
+                'rgba(26, 115, 232, 1)',
+                'rgba(26, 115, 232, 1)',
+                'rgba(26, 115, 232, 1)',
+                'rgba(26, 115, 232, 1)'
+            ],
+            borderWidth: 1
+        }]
+    };
+
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                tooltip: {
+                    enabled: true
+                }
+            },
+            onClick: (e) => {
+                const element = chart.getElementAtEvent(e);
+                if (element.length > 0) {
+                    const datasetIndex = element[0]._datasetIndex;
+                    const index = element[0]._index;
+                    const value = chart.data.datasets[datasetIndex].data[index];
+                    const label = chart.data.labels[index];
+
+                    // Change the color of the clicked bar
+                    chart.data.datasets[datasetIndex].backgroundColor = chart.data.datasets[datasetIndex].backgroundColor.map((color, i) => {
+                        if (i === index) return 'rgba(33, 161, 241, 0.8)';
+                        return 'rgba(26, 115, 232, 0.7)';
+                    });
+                    chart.update();
+                    alert(`You clicked on ${label} bar. Value: ${value}`);
+                }
+            }
+        }
+    };
+
+    const chart = new Chart(ctx, config);
 
     sidebarItems.forEach((item) => {
         item.addEventListener('click', function () {
@@ -19,80 +76,35 @@ document.addEventListener('DOMContentLoaded', function () {
         let contentHTML = '';
         switch (section) {
             case 'overview':
-                contentHTML = `<h2>Overview</h2><p>Overview content goes here.</p>`;
-                break;
-            case 'aiAssistant':
                 contentHTML = `
-                    <div class="ai-assistant">
-                        <h2><span class="icon">🤖</span> AI Assistant</h2>
-                        <div class="chatbox">
-                            <div id="chatDisplay" class="chat-display"></div>
-                            <div class="chat-input">
-                                <input type="text" id="userInput" placeholder="Ask me anything..." />
-                                <button id="sendBtn">Generate <span>➤</span></button>
-                            </div>
+                    <h2>Dashboard Overview</h2>
+                    <div class="overview-stats">
+                        <div class="stat-card">
+                            <h3>Total Jobs Posted</h3>
+                            <p id="jobsPosted" class="stat-value">56</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Total Shortlisted Candidates</h3>
+                            <p id="shortlistedCandidates" class="stat-value">43</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Total Interviews Scheduled</h3>
+                            <p id="interviewsScheduled" class="stat-value">12</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Total Payments Processed</h3>
+                            <p id="paymentsProcessed" class="stat-value">$25,000</p>
                         </div>
                     </div>
+                    <div class="activity-graph">
+                        <canvas id="activityChart"></canvas>
+                    </div>
                 `;
-
-                setTimeout(() => {
-                    const chatDisplay = document.getElementById('chatDisplay');
-                    const userInput = document.getElementById('userInput');
-                    const sendBtn = document.getElementById('sendBtn');
-
-                    sendBtn.addEventListener('click', () => {
-                        const message = userInput.value.trim();
-                        if (message) {
-                            appendMessage(chatDisplay, 'user', message);
-                            userInput.value = '';
-                            getAIResponse(chatDisplay, message);
-                        }
-                    });
-
-                    userInput.addEventListener('keydown', (e) => {
-                        if (e.key === 'Enter') sendBtn.click();
-                    });
-                }, 100);
                 break;
             default:
                 contentHTML = `<h2>${section}</h2><p>${section} content goes here.</p>`;
         }
 
         contentArea.innerHTML = contentHTML;
-    }
-
-    function appendMessage(container, sender, message) {
-        const messageDiv = document.createElement('div');
-        messageDiv.classList.add(`${sender}-message`);
-        messageDiv.textContent = message;
-        container.appendChild(messageDiv);
-        container.scrollTop = container.scrollHeight;
-    }
-
-    async function getAIResponse(container, userMessage) {
-        appendMessage(container, 'ai', 'Thinking...');
-        try {
-            const response = await fetch('https://api.openai.com/v1/chat/completions', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer YOUR_API_KEY` // Replace YOUR_API_KEY with your actual API key
-                },
-                body: JSON.stringify({
-                    model: "gpt-3.5-turbo", // Model to use
-                    messages: [{ role: "user", content: userMessage }]
-                })
-            });
-
-            const data = await response.json();
-            const aiReply = data.choices[0].message.content;
-
-            // Add AI response to chat
-            appendMessage(container, 'ai', aiReply);
-
-        } catch (error) {
-            appendMessage(container, 'ai', 'Sorry, there was an error connecting to the AI.');
-            console.error('Error:', error);
-        }
     }
 });

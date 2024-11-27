@@ -146,3 +146,77 @@ body, html {
 .chat-input button:hover {
     background: linear-gradient(to right, #1a5ecb, #1a89dc);
 }
+
+
+/* Overview Section Styling */
+.overview-section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.overview-section h2 {
+    font-size: 24px;
+    color: #1a73e8;
+    margin-bottom: 20px;
+}
+
+.overview-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background-color: #f1f3f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    width: 23%;
+}
+
+.stat-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.stat-card .stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a73e8;
+}
+
+.recent-activity {
+    background-color: #f1f3f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.recent-activity h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#recentActivityList {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#recentActivityList li {
+    font-size: 14px;
+    color: #555;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+#recentActivityList li:hover {
+    background-color: #f8f9fa;
+}

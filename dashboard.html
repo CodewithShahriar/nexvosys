@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  <!-- Include Chart.js -->
 </head>
 <body>
     <div class="container">
@@ -30,9 +31,38 @@
             <div id="content-area">
                 <h2>Welcome to the Dashboard!</h2>
                 <p>Click on the sidebar options to navigate.</p>
+
+                <div id="overview" class="overview-section">
+                    <h2>Dashboard Overview</h2>
+                    <div class="overview-stats">
+                        <div class="stat-card">
+                            <h3>Total Jobs Posted</h3>
+                            <p id="jobsPosted" class="stat-value">56</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Total Shortlisted Candidates</h3>
+                            <p id="shortlistedCandidates" class="stat-value">43</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Total Interviews Scheduled</h3>
+                            <p id="interviewsScheduled" class="stat-value">12</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Total Payments Processed</h3>
+                            <p id="paymentsProcessed" class="stat-value">$25,000</p>
+                        </div>
+                    </div>
+
+                    <!-- Graph Canvas -->
+                    <div class="activity-graph">
+                        <canvas id="activityChart"></canvas>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
+
     <script src="js/dashboard.js"></script>
 </body>
 </html>
