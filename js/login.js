@@ -5,6 +5,7 @@ function showSignupModal() {
 function closeSignupModal() {
     document.getElementById('signupModal').style.display = 'none';
 }
+
 function showloginModal() {
     document.getElementById('loginModal').style.display = 'block';
 }
@@ -12,10 +13,6 @@ function showloginModal() {
 function closeloginModal() {
     document.getElementById('loginModal').style.display = 'none';
 }
-
-
-
-
 
 document.querySelector('.auth-button-submit').addEventListener('click', function(event) {
     event.preventDefault();
@@ -42,11 +39,10 @@ document.querySelector('.auth-button-submit').addEventListener('click', function
 
     // Show logout button
     showLogoutButton();
-    
+
     // Close the modal
     closeSignupModal();
 });
-
 
 // Function to show the logout button
 function showLogoutButton() {
@@ -72,7 +68,7 @@ function logout() {
     // Clear user data
     // localStorage.removeItem('userEmail');
     // localStorage.removeItem('userPassword');
-    
+
     // Show signup and login buttons again
     const signupButton = document.querySelector('.auth-button-signup');
     const loginButton = document.querySelector('.auth-button-login');
@@ -89,47 +85,68 @@ function logout() {
     }
 }
 
+// Function to handle login credentials autofill
+document.getElementById('adminLogin').addEventListener('click', function() {
+    document.getElementById('login-username').value = 'admin@nexvosys.com';
+    document.getElementById('login-password').value = 'admin123';
+});
 
-/// Function to handle login submission
+document.getElementById('developerLogin').addEventListener('click', function() {
+    document.getElementById('login-username').value = 'developer@nexvosys.com';
+    document.getElementById('login-password').value = 'dev123';
+});
+
+document.getElementById('clientLogin').addEventListener('click', function() {
+    document.getElementById('login-username').value = 'client@nexvosys.com';
+    document.getElementById('login-password').value = 'client123';
+});
+
+// Function to handle login submission
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
 
     const username = document.getElementById('login-username').value;
     const password = document.getElementById('login-password').value;
 
-    // Check credentials (you can modify this to match your signup logic)
+    // Check credentials only for Admin
+    if (username === 'admin@nexvosys.com' && password === 'admin123') {
+        // Successful login for Admin
+        window.location.href = 'dashboard.html'; // Redirect to dashboard
+        return; // Stop further execution
+    } 
+    
+    // For Developer and Client, do not redirect to dashboard
+    if (username === 'developer@nexvosys.com' && password === 'dev123') {
+        // If login is successful for Developer, show a message
+        alert('The Developer dashboard is not ready yet. Please try again later.');
+        return;
+    }
+
+    if (username === 'client@nexvosys.com' && password === 'client123') {
+        // If login is successful for Client, show a message
+        alert('The Client dashboard is not ready yet. Please try again later.');
+        return;
+    }
+
+    // Check for general login credentials stored in localStorage
     const storedEmail = localStorage.getItem('userEmail');
     const storedPassword = localStorage.getItem('userPassword');
 
     if (username === storedEmail && password === storedPassword) {
         // Show logout button
         showLogoutButton();
-        
+
         // Close the modal
         closeloginModal('loginModal');
+
+        // Redirect to the dashboard page
+        window.location.href = 'dashboard.html';
     } else {
+        // If login fails, show the alert
         alert('Log in failed. Invalid email or password.');
     }
 });
 
-
 function forgotPassword() {
     alert("Password reset instructions will be sent to your email.");
 }
-
-
-// Function to handle login credentials autofill
-document.getElementById('adminLogin').addEventListener('click', function() {
-    document.getElementById('login-username').value = 'admin@gmail.com';
-    document.getElementById('login-password').value = 'admin1';
-});
-
-document.getElementById('recruiterLogin').addEventListener('click', function() {
-    document.getElementById('login-username').value = 'recruiter@gmail.com';
-    document.getElementById('login-password').value = 'recruiter1';
-});
-
-document.getElementById('candidateLogin').addEventListener('click', function() {
-    document.getElementById('login-username').value = 'candidate@gmail.com';
-    document.getElementById('login-password').value = 'candidate1';
-});
