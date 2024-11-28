@@ -201,6 +201,96 @@ button {
 }
 
 button:hover {
-    background-color: #07268d;
+    background-color: #000000;
     color: white;
+}
+
+
+/* Client Management Section */
+.client-management-section {
+    padding: 20px;
+}
+
+.client-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    flex: 1;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.stat-card p {
+    color: #666;
+    margin-top: 10px;
+}
+
+.client-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.client-table th,
+.client-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.client-table th {
+    background-color: #5278f4;
+    color: white;
+    text-transform: uppercase;
+}
+
+.client-table td {
+    background-color: #fff;
+}
+
+.client-table .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.85rem;
+}
+
+.client-table .status.approved {
+    background-color: #28a745;
+}
+
+.client-table .status.ongoing {
+    background-color: #ffc107;
+    color: black;
+}
+
+.client-table .status.pending {
+    background-color: #007bff;
+}
+
+.client-table .status.rejected {
+    background-color: #dc3545;
+}
+
+.details-link {
+    color: #5278f4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.details-link:hover {
+    text-decoration: underline;
 }

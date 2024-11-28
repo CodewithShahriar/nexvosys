@@ -85,8 +85,76 @@
                             <button>View Details</button>
                         </div>
                     </div>
+
+                     <!-- Graph for Project Status -->
+                    <canvas id="projectStatusChart" width="250" height="100"></canvas>
                 </section>
 
+                    <!-- client -->
+                    <section id="clientmanagement" class="client-management-section hidden">
+                        <h2>Client Management</h2>
+                        <div class="client-stats">
+                            <div class="stat-card">
+                                <h3>3201</h3>
+                                <p>Total Clients</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3>540</h3>
+                                <p>Ongoing Projects</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3>85%</h3>
+                                <p>Satisfaction Rate</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3>120+</h3>
+                                <p>Services Delivered</p>
+                            </div>
+                        </div>
+                        <table class="client-table">
+                            <thead>
+                                <tr>
+                                    <th>Client Name</th>
+                                    <th>Service</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Otis Wright</td>
+                                    <td>Web Development</td>
+                                    <td>06/10/2020</td>
+                                    <td><span class="status approved">Completed</span></td>
+                                    <td><a href="#" class="details-link">View Details ➔</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Zayd Wilson</td>
+                                    <td>Graphic Design</td>
+                                    <td>06/15/2020</td>
+                                    <td><span class="status ongoing">Ongoing</span></td>
+                                    <td><a href="#" class="details-link">View Details ➔</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Penny Taylor</td>
+                                    <td>Digital Marketing</td>
+                                    <td>06/18/2020</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                    <td><a href="#" class="details-link">View Details ➔</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Francisca Davis</td>
+                                    <td>App Development</td>
+                                    <td>06/20/2020</td>
+                                    <td><span class="status rejected">Rejected</span></td>
+                                    <td><a href="#" class="details-link">View Details ➔</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                
                 
                 <!-- AI Assistant Section -->
                 <section id="ai-assistant" class="ai-section hidden">
