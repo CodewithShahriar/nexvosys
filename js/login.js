@@ -116,3 +116,20 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 function forgotPassword() {
     alert("Password reset instructions will be sent to your email.");
 }
+
+
+// Function to handle login credentials autofill
+document.getElementById('adminLogin').addEventListener('click', function() {
+    document.getElementById('login-username').value = 'admin@gmail.com';
+    document.getElementById('login-password').value = 'admin1';
+});
+
+document.getElementById('recruiterLogin').addEventListener('click', function() {
+    document.getElementById('login-username').value = 'recruiter@gmail.com';
+    document.getElementById('login-password').value = 'recruiter1';
+});
+
+document.getElementById('candidateLogin').addEventListener('click', function() {
+    document.getElementById('login-username').value = 'candidate@gmail.com';
+    document.getElementById('login-password').value = 'candidate1';
+});
