@@ -30,6 +30,12 @@ document.addEventListener('DOMContentLoaded', function () {
             case 'marketing':
                 document.querySelector('#marketing').classList.remove('hidden');
                 break;
+            case 'invoice-payment':
+                document.querySelector('#invoice-payment').classList.remove('hidden');
+                break;
+            case 'team':
+                document.querySelector('#team').classList.remove('hidden');
+                break;
             case 'aiAssistant':
                 document.querySelector('#ai-assistant').classList.remove('hidden');
                 break;
@@ -100,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
+// marketing
 document.addEventListener('DOMContentLoaded', function () {
     // Revenue Chart
     const revenueCtx = document.getElementById('revenueChart').getContext('2d');
@@ -134,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 {
                     label: 'Conversions',
-                    data: [500, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800],
+                    data: [17000, 20000, 25000, 38000, 42000, 44000, 42000, 44000, 55000, 58000, 69000, 75000],
                     borderColor: '#f44336',
                     fill: false,
                 },

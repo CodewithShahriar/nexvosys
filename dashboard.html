@@ -20,8 +20,8 @@
                 <li data-section="projects">Projects</li>
                 <li data-section="clientmanagement">Client Management</li>
                 <li data-section="marketing">Marketing </li>
-                <li data-section="invoices">Invoices & Payments</li>
-                <li data-section="reports">Reports</li>
+                <li data-section="invoice-payment">Invoices & Payments</li>
+                <li data-section="team">Team</li>
                 <li data-section="settings">Settings</li>
                 <li data-section="aiAssistant">AI Assistant</li>
                 <li data-section="home">Home</li>
@@ -195,7 +195,198 @@
                     </div>
                 </section>
                 
+
+                <!-- invoice & payment -->
+                <section id="invoice-payment" class="invoice-payment-section hidden">
+                    <h2>Invoice & Payment Overview</h2>
                 
+                    <!-- Invoice Overview Section -->
+                    <div class="invoice-overview">
+                        <div class="invoice-summary">
+                            <h3>Total Invoices</h3>
+                            <p class="value">150</p>
+                            <p class="small">Total invoices issued</p>
+                        </div>
+                
+                        <div class="invoice-summary">
+                            <h3>Pending Payments</h3>
+                            <p class="value">$10,000</p>
+                            <p class="small">Total pending payments</p>
+                        </div>
+                
+                        <div class="invoice-summary">
+                            <h3>Paid Invoices</h3>
+                            <p class="value">$45,000</p>
+                            <p class="small">Total paid invoices</p>
+                        </div>
+                
+                        <div class="invoice-summary">
+                            <h3>Amount Due</h3>
+                            <p class="value">$5,000</p>
+                            <p class="small">Total amount due</p>
+                        </div>
+                    </div>
+                
+                    <!-- Invoice List Section -->
+                    <div class="invoice-list-section">
+                        <h3>Recent Invoices</h3>
+                        <table class="invoice-list">
+                            <thead>
+                                <tr>
+                                    <th>Invoice #</th>
+                                    <th>Client</th>
+                                    <th>Date Issued</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>INV12345</td>
+                                    <td>John Doe</td>
+                                    <td>2024-11-15</td>
+                                    <td>$1,200</td>
+                                    <td class="paid">Paid</td>
+                                </tr>
+                                <tr>
+                                    <td>INV12346</td>
+                                    <td>Jane Smith</td>
+                                    <td>2024-11-20</td>
+                                    <td>$500</td>
+                                    <td class="pending">Pending</td>
+                                </tr>
+                                <tr>
+                                    <td>INV12347</td>
+                                    <td>Michael Green</td>
+                                    <td>2024-11-25</td>
+                                    <td>$3,000</td>
+                                    <td class="due">Due</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                
+                    <!-- Payment History Section -->
+                    <div class="payment-history">
+                        <h3>Payment History</h3>
+                        <table class="payment-history-table">
+                            <thead>
+                                <tr>
+                                    <th>Payment Date</th>
+                                    <th>Invoice #</th>
+                                    <th>Amount Paid</th>
+                                    <th>Payment Method</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2024-11-10</td>
+                                    <td>INV12345</td>
+                                    <td>$1,200</td>
+                                    <td>Bank Transfer</td>
+                                    <td class="success">Successful</td>
+                                </tr>
+                                <tr>
+                                    <td>2024-11-22</td>
+                                    <td>INV12346</td>
+                                    <td>$500</td>
+                                    <td>Credit Card</td>
+                                    <td class="failed">Failed</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                
+
+
+                <!-- team -->
+                <section id="team" class="team-section hidden">
+                    <h2>Team Members & Roles</h2>
+                    <div class="team-members">
+                        <!-- Team Member: Abu Sahid -->
+                        <div class="team-card">
+                            <div class="team-info">
+                                <img src="images/abu-sahid.jpg" alt="Abu Sahid">
+                                <h3>Abu Sahid</h3>
+                                <p><strong>Role:</strong> Mern Developer & UI/UX Designer</p>
+                            </div>
+                            <div class="progress-info">
+                                <p><strong>Progress:</strong></p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 80%;"></div>
+                                </div>
+                                <p>80% Completed</p>
+                            </div>
+                        </div>
+                
+                        <!-- Team Member: Abid Shahriar -->
+                        <div class="team-card">
+                            <div class="team-info">
+                                <img src="images/abid-shahriar.jpg" alt="Abid Shahriar">
+                                <h3>Abid Shahriar</h3>
+                                <p><strong>Role:</strong> Web Developer</p>
+                            </div>
+                            <div class="progress-info">
+                                <p><strong>Progress:</strong></p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 70%;"></div>
+                                </div>
+                                <p>70% Completed</p>
+                            </div>
+                        </div>
+                
+                        <!-- Team Member: Joyant Sheikhar -->
+                        <div class="team-card">
+                            <div class="team-info">
+                                <img src="images/joyant-sheikhar.jpg" alt="Joyant Sheikhar">
+                                <h3>Joyant Sheikhar</h3>
+                                <p><strong>Role:</strong> Software Developer</p>
+                            </div>
+                            <div class="progress-info">
+                                <p><strong>Progress:</strong></p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 85%;"></div>
+                                </div>
+                                <p>85% Completed</p>
+                            </div>
+                        </div>
+                
+                        <!-- Team Member: Mahbuba Khanom -->
+                        <div class="team-card">
+                            <div class="team-info">
+                                <img src="images/mahbuba-khanom.jpg" alt="Mahbuba Khanom">
+                                <h3>Mahbuba Khanom</h3>
+                                <p><strong>Role:</strong> Illustration Artist</p>
+                            </div>
+                            <div class="progress-info">
+                                <p><strong>Progress:</strong></p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 60%;"></div>
+                                </div>
+                                <p>60% Completed</p>
+                            </div>
+                        </div>
+                
+                        <!-- Team Member: Sumon -->
+                        <div class="team-card">
+                            <div class="team-info">
+                                <img src="images/sumon.jpg" alt="Sumon">
+                                <h3>Sumon</h3>
+                                <p><strong>Role:</strong> Digital Marketing Specialist</p>
+                            </div>
+                            <div class="progress-info">
+                                <p><strong>Progress:</strong></p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 75%;"></div>
+                                </div>
+                                <p>75% Completed</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 
                     
                 

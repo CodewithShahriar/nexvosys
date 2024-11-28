@@ -361,17 +361,6 @@ button:hover {
     opacity: 0.7;
 }
 
-.imp{
-    background-color: #92b2d4a0;
-}
-
-.trn{
-    background-color: #8fca9dad;
-}
-
-.cpc{
-    background-color: #edeb88;
-}
 
 /* Ensure all chart elements have space and proper size */
 .performance-box canvas {
@@ -425,4 +414,192 @@ button:hover {
     .bottom-row .stat-box {
         min-width: 100%;
     }
+}
+
+
+/* payment */
+/* Invoice & Payment Section Styling */
+.invoice-payment-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.invoice-overview {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.invoice-summary {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.invoice-summary h3 {
+    margin-bottom: 10px;
+}
+
+.invoice-summary .value {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.invoice-summary .small {
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+
+/* Invoice List Table */
+.invoice-list {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+
+.invoice-list th, .invoice-list td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.invoice-list th {
+    background-color: #07268d;
+    color: white;
+}
+
+.invoice-list td {
+    background-color: #fff;
+}
+
+.invoice-list .paid {
+    background-color: #28a745;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.invoice-list .pending {
+    background-color: #ffc107;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.invoice-list .due {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Payment History Section */
+.payment-history {
+    margin-top: 30px;
+}
+
+.payment-history h3 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.payment-history-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.payment-history-table th, .payment-history-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.payment-history-table th {
+    background-color: #07268d;
+    color: white;
+}
+
+.payment-history-table td {
+    background-color: #fff;
+}
+
+.payment-history-table .success {
+    background-color: #28a745;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.payment-history-table .failed {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+
+/* team */
+/* Team Section Styling */
+.team-section {
+    padding: 20px;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team-card {
+    flex: 1 1 calc(33% - 20px);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.team-card .team-info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-card .team-info h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.team-card .team-info p {
+    color: #555;
+}
+
+.team-card .progress-info {
+    margin-top: 20px;
+}
+
+.progress-bar-container {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #07268d;
+    border-radius: 10px;
+}
+
+.team-card p {
+    font-size: 0.9em;
+    color: #888;
 }
