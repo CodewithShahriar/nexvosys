@@ -19,7 +19,7 @@
                 <li data-section="overview" class="active">Overview</li>
                 <li data-section="projects">Projects</li>
                 <li data-section="clientmanagement">Client Management</li>
-                <li data-section="tasks">Tasks</li>
+                <li data-section="marketing">Marketing </li>
                 <li data-section="invoices">Invoices & Payments</li>
                 <li data-section="reports">Reports</li>
                 <li data-section="settings">Settings</li>
@@ -154,7 +154,50 @@
                         </table>
                     </section>
                     
+
+                    
+                <!-- marketing -->
+
+                <section id="marketing" class="marketing-section hidden">
+                    <h2>Marketing Overview</h2>
+                    <div class="marketing-overview">
+                        <!-- Top Row -->
+                        <div class="top-row">
+                            <div class="performance-box">
+                                <h3>Revenues</h3>
+                                <canvas id="revenueChart"></canvas>
+                            </div>
+                            <div class="performance-box">
+                                <h3>Sessions & Conversion Performance</h3>
+                                <canvas id="conversionChart"></canvas>
+                            </div>
+                        </div>
                 
+                        <!-- Bottom Row -->
+                        <div class="bottom-row">
+                            <div class="gauge-box cpc">
+                                <h3>Cost Per Click (CPC)</h3>
+                                <div id="cpcGauge"></div>
+                                <p class="value">$3.76</p>
+                            </div>
+                            <div class="stat-box trn">
+                                <h3>Transactions</h3>
+                                <p class="value">35,567</p>
+                                <p class="small">Previous Period: +5%</p>
+                            </div>
+                            <div class="stat-box imp">
+                                <h3>Impressions</h3>
+                                <p class="value">252,292</p>
+                                <p class="small">Previous Period: +34%</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </section>
+                
+                
+                
+                    
                 
                 <!-- AI Assistant Section -->
                 <section id="ai-assistant" class="ai-section hidden">

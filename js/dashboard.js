@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', function () {
             case 'clientmanagement':
                 document.querySelector('#clientmanagement').classList.remove('hidden');
                 break;
+            case 'marketing':
+                document.querySelector('#marketing').classList.remove('hidden');
+                break;
             case 'aiAssistant':
                 document.querySelector('#ai-assistant').classList.remove('hidden');
                 break;
@@ -98,3 +101,53 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Revenue Chart
+    const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+    new Chart(revenueCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+            datasets: [
+                {
+                    label: 'Revenue',
+                    data: [1200, 1500, 1800, 2000, 2200, 3000, 3500, 4000, 4500, 5000],
+                    backgroundColor: '#03a9f4',
+                },
+            ],
+        },
+        options: { responsive: true },
+    });
+
+    // Conversion Chart
+    const conversionCtx = document.getElementById('conversionChart').getContext('2d');
+    new Chart(conversionCtx, {
+        type: 'line',
+        data: {
+            labels: ['Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+            datasets: [
+                {
+                    label: 'Sessions',
+                    data: [20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000],
+                    borderColor: '#2196f3',
+                    fill: false,
+                },
+                {
+                    label: 'Conversions',
+                    data: [500, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800],
+                    borderColor: '#f44336',
+                    fill: false,
+                },
+            ],
+        },
+        options: { responsive: true },
+    });
+
+    // CPC Gauge
+    const cpcGauge = document.getElementById('cpcGauge');
+    cpcGauge.innerHTML = `<svg viewBox="0 0 36 36" class="circular-chart green">
+      <path class="circle" stroke-dasharray="75, 100" d="M18 2.0845
+        a 15.9155 15.9155 0 0 1 0 31.831
+        a 15.9155 15.9155 0 0 1 0 -31.831" />
+    </svg>`;
+});

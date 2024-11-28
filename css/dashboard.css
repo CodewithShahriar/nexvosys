@@ -294,3 +294,135 @@ button:hover {
 .details-link:hover {
     text-decoration: underline;
 }
+
+
+/* marketing */
+
+/* Marketing Section Styling */
+.marketing-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.marketing-overview {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.top-row, .bottom-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.performance-box {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gauge-box {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box h3 {
+    margin-bottom: 10px;
+}
+
+.stat-box p.value {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.stat-box .small {
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+
+.imp{
+    background-color: #92b2d4a0;
+}
+
+.trn{
+    background-color: #8fca9dad;
+}
+
+.cpc{
+    background-color: #edeb88;
+}
+
+/* Ensure all chart elements have space and proper size */
+.performance-box canvas {
+    width: 100%;
+    height: 300px;
+}
+
+/* Styling for gauge (CPC) */
+#gaugeChart {
+    margin: 10px auto;
+    height: 100px;
+    width: 100px;
+}
+
+.gauge-box svg {
+    width: 50px;
+    height: 50px;
+}
+
+.gauge-box path.circle {
+    fill: none;
+    stroke-width: 5.8;
+    stroke: #28a745;
+}
+
+/* Bottom Section Layout */
+.bottom-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.bottom-row .stat-box {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.bottom-row .stat-box .value {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+    .top-row, .bottom-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bottom-row .stat-box {
+        min-width: 100%;
+    }
+}
