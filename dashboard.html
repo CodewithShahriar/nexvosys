@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexvosys</title>
+    <title>Nexvosys - Admin Dashboard</title>
     <link rel="stylesheet" href="css/dashboard.css">
 
-    <!-- favicon -->
+    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
         <!-- Sidebar -->
-        <div class="sidebar">
-            <h2>Admin Dashboard</h2>
+        <aside class="sidebar">
+            <h2>Nexvosys Dashboard</h2>
             <ul>
                 <li data-section="overview" class="active">Overview</li>
-                <li data-section="postJob">Post Job</li>
-                <li data-section="postedJobs">Posted Jobs</li>
-                <li data-section="shortlisted">Shortlisted</li>
-                <li data-section="interview">Interview</li>
-                <li data-section="recruiterProfile">Recruiter Profile</li>
-                <li data-section="myPayments">My Payments</li>
+                <li data-section="projects">Projects</li>
+                <li data-section="clientmanagement">Client Management</li>
+                <li data-section="tasks">Tasks</li>
+                <li data-section="invoices">Invoices & Payments</li>
+                <li data-section="reports">Reports</li>
+                <li data-section="settings">Settings</li>
                 <li data-section="aiAssistant">AI Assistant</li>
                 <li data-section="home">Home</li>
                 <li data-section="logout" class="logout">Sign out</li>
             </ul>
-        </div>
+        </aside>
 
         <!-- Main Content -->
-        <div class="main-content">
+        <main class="main-content">
             <div id="content-area">
-                <div class="overview-section">
+                <!-- Overview Section -->
+                <section class="overview-section">
                     <h2>Dashboard Overview</h2>
                     <div class="overview-cards">
                         <div class="card" style="background: linear-gradient(to right, #ffafbd, #ffc3a0);">
@@ -54,7 +55,7 @@
 
                     <div class="chart-container">
                         <div class="chart-box large-chart">
-                            <h3>Revenue Growth And User Engagement</h3>
+                            <h3>Revenue Growth & User Engagement</h3>
                             <canvas id="visitSalesChart"></canvas>
                         </div>
                         <div class="chart-box small-chart">
@@ -62,21 +63,44 @@
                             <canvas id="trafficSourcesChart"></canvas>
                         </div>
                     </div>
-                </div>
+                </section>
 
+                <!-- Projects Section -->
+                <section id="projects" class="project-section hidden">
+                    <h2>Projects</h2>
+                    <div class="project-cards">
+                        <div class="card ongoing">
+                            <h3>Ongoing Projects</h3>
+                            <p>12 Projects</p>
+                            <button>View Details</button>
+                        </div>
+                        <div class="card completed">
+                            <h3>Completed Projects</h3>
+                            <p>25 Projects</p>
+                            <button>View Details</button>
+                        </div>
+                        <div class="card remaining">
+                            <h3>Remaining Projects</h3>
+                            <p>8 Projects</p>
+                            <button>View Details</button>
+                        </div>
+                    </div>
+                </section>
+
+                
                 <!-- AI Assistant Section -->
-                <div id="ai-assistant" class="ai-section hidden">
+                <section id="ai-assistant" class="ai-section hidden">
                     <h2><span class="icon">🤖</span> AI Assistant</h2>
                     <div class="chatbox">
                         <div id="chatDisplay" class="chat-display"></div>
                         <div class="chat-input">
-                            <input type="text" id="userInput" placeholder="Ask me anything..." />
+                            <input type="text" id="userInput" placeholder="Ask me anything..." aria-label="User Input">
                             <button id="sendBtn">Generate <span>➤</span></button>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
-        </div>
+        </main>
     </div>
     <script src="js/dashboard.js"></script>
 </body>

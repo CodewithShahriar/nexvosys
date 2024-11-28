@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const sidebarItems = document.querySelectorAll('.sidebar ul li');
     const contentArea = document.getElementById('content-area');
 
-    // Section management
+    // Sidebar section management
     sidebarItems.forEach((item) => {
         item.addEventListener('click', function () {
             sidebarItems.forEach((el) => el.classList.remove('active'));
@@ -14,17 +14,28 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function showSection(section) {
-        const overviewSection = document.querySelector('.overview-section');
-        const aiSection = document.getElementById('ai-assistant');
+        const sections = document.querySelectorAll('.main-content section');
+        sections.forEach((sec) => sec.classList.add('hidden'));
 
-        overviewSection.classList.add('hidden');
-        aiSection.classList.add('hidden');
-
-        if (section === 'overview') overviewSection.classList.remove('hidden');
-        if (section === 'aiAssistant') aiSection.classList.remove('hidden');
+        switch (section) {
+            case 'overview':
+                document.querySelector('.overview-section').classList.remove('hidden');
+                break;
+            case 'projects':
+                document.querySelector('#projects').classList.remove('hidden');
+                break;
+            case 'clientmanagement':
+                document.querySelector('#clientmanagement').classList.remove('hidden');
+                break;
+            case 'aiAssistant':
+                document.querySelector('#ai-assistant').classList.remove('hidden');
+                break;
+            default:
+                console.warn('Invalid section:', section);
+        }
     }
 
-    // Load Overview Charts
+    // Overview Charts
     const ctx1 = document.getElementById('visitSalesChart').getContext('2d');
     const ctx2 = document.getElementById('trafficSourcesChart').getContext('2d');
 
@@ -33,23 +44,36 @@ document.addEventListener('DOMContentLoaded', function () {
         data: {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
             datasets: [
-                { label: 'Revenue Growth', data: [10, 15, 20, 25, 30, 35, 40, 45], backgroundColor: '#07268d' },
-                { label: 'User Engagement', data: [5, 10, 15, 20, 25, 30, 35, 40], backgroundColor: '#03a9f4' }
-            ]
+                {
+                    label: 'Revenue Growth',
+                    data: [10, 15, 20, 25, 30, 35, 40, 45],
+                    backgroundColor: '#07268d',
+                },
+                {
+                    label: 'User Engagement',
+                    data: [5, 10, 15, 20, 25, 30, 35, 40],
+                    backgroundColor: '#03a9f4',
+                },
+            ],
         },
-        options: { responsive: true }
+        options: { responsive: true },
     });
 
     new Chart(ctx2, {
         type: 'doughnut',
         data: {
             labels: ['Search Engines', 'Direct Click', 'Referral Traffic'],
-            datasets: [{ data: [50, 30, 20], backgroundColor: ['#07268d', '#03a9f4', '#fbc02d'] }]
+            datasets: [
+                {
+                    data: [50, 30, 20],
+                    backgroundColor: ['#07268d', '#03a9f4', '#fbc02d'],
+                },
+            ],
         },
-        options: { responsive: true }
+        options: { responsive: true },
     });
 
-    // AI Assistant Functionality
+    // AI Assistant functionality
     const chatDisplay = document.getElementById('chatDisplay');
     const userInput = document.getElementById('userInput');
     const sendBtn = document.getElementById('sendBtn');
@@ -70,3 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
         chatDisplay.scrollTop = chatDisplay.scrollHeight;
     });
 });
+
+
+
+

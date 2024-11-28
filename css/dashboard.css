@@ -149,3 +149,58 @@ body {
 .chat-input button:hover {
     background-color: #1a4eff;
 }
+
+
+
+.card {
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    margin: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card.primary {
+    background-color: #07268d;
+}
+
+.card.success {
+    background-color: #28a745;
+}
+
+.card.warning {
+    background-color: #ffc107;
+}
+
+.card.ongoing {
+    background-color: #007bff;
+}
+
+.card.completed {
+    background-color: #28a745;
+}
+
+.card.remaining {
+    background-color: #dc3545;
+}
+
+.project-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #07268d;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #07268d;
+    color: white;
+}
