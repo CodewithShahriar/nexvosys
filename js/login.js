@@ -116,5 +116,3 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 function forgotPassword() {
     alert("Password reset instructions will be sent to your email.");
 }
-
-

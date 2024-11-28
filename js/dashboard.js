@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
         data: {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
             datasets: [
-                { label: 'USA', data: [10, 15, 20, 25, 30, 35, 40, 45], backgroundColor: '#07268d' },
-                { label: 'UK', data: [5, 10, 15, 20, 25, 30, 35, 40], backgroundColor: '#03a9f4' }
+                { label: 'Revenue Growth', data: [10, 15, 20, 25, 30, 35, 40, 45], backgroundColor: '#07268d' },
+                { label: 'User Engagement', data: [5, 10, 15, 20, 25, 30, 35, 40], backgroundColor: '#03a9f4' }
             ]
         },
         options: { responsive: true }
