@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="css/dashboard.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
@@ -29,40 +29,52 @@
         <!-- Main Content -->
         <div class="main-content">
             <div id="content-area">
-                <h2>Welcome to the Dashboard!</h2>
-                <p>Click on the sidebar options to navigate.</p>
-
-                <div id="overview" class="overview-section">
+                <div class="overview-section">
                     <h2>Dashboard Overview</h2>
-                    <div class="overview-stats">
-                        <div class="stat-card">
-                            <h3>Total Jobs Posted</h3>
-                            <p id="jobsPosted" class="stat-value">56</p>
+                    <div class="overview-cards">
+                        <div class="card" style="background: linear-gradient(to right, #ffafbd, #ffc3a0);">
+                            <h3>Revenue</h3>
+                            <p>$15,000</p>
+                            <p class="small">Increased by 60%</p>
                         </div>
-                        <div class="stat-card">
-                            <h3>Total Shortlisted Candidates</h3>
-                            <p id="shortlistedCandidates" class="stat-value">43</p>
+                        <div class="card" style="background: linear-gradient(to right, #2193b0, #6dd5ed);">
+                            <h3>Active Users</h3>
+                            <p>45,633</p>
+                            <p class="small">Decreased by 10%</p>
                         </div>
-                        <div class="stat-card">
-                            <h3>Total Interviews Scheduled</h3>
-                            <p id="interviewsScheduled" class="stat-value">12</p>
-                        </div>
-                        <div class="stat-card">
-                            <h3>Total Payments Processed</h3>
-                            <p id="paymentsProcessed" class="stat-value">$25,000</p>
+                        <div class="card" style="background: linear-gradient(to right, #cc2b5e, #753a88);">
+                            <h3>Total Users</h3>
+                            <p>95,574</p>
+                            <p class="small">Increased by 5%</p>
                         </div>
                     </div>
 
-                    <!-- Graph Canvas -->
-                    <div class="activity-graph">
-                        <canvas id="activityChart"></canvas>
+                    <div class="chart-container">
+                        <div class="chart-box large-chart">
+                            <h3>Revenue Growth And User Engagement</h3>
+                            <canvas id="visitSalesChart"></canvas>
+                        </div>
+                        <div class="chart-box small-chart">
+                            <h3>Traffic Sources</h3>
+                            <canvas id="trafficSourcesChart"></canvas>
+                        </div>
                     </div>
                 </div>
-                
+
+                <!-- AI Assistant Section -->
+                <div id="ai-assistant" class="ai-section hidden">
+                    <h2><span class="icon">🤖</span> AI Assistant</h2>
+                    <div class="chatbox">
+                        <div id="chatDisplay" class="chat-display"></div>
+                        <div class="chat-input">
+                            <input type="text" id="userInput" placeholder="Ask me anything..." />
+                            <button id="sendBtn">Generate <span>➤</span></button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
     <script src="js/dashboard.js"></script>
 </body>
 </html>

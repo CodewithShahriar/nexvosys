@@ -1,110 +1,72 @@
 document.addEventListener('DOMContentLoaded', function () {
     const sidebarItems = document.querySelectorAll('.sidebar ul li');
     const contentArea = document.getElementById('content-area');
-    const ctx = document.getElementById('activityChart').getContext('2d');
 
-    const data = {
-        labels: ['Job Posted', 'Shortlisted', 'Interviews', 'Payments'],
-        datasets: [{
-            label: 'Overview Stats',
-            data: [56, 43, 12, 25000],
-            backgroundColor: [
-                'rgba(26, 115, 232, 0.7)',
-                'rgba(26, 115, 232, 0.7)',
-                'rgba(26, 115, 232, 0.7)',
-                'rgba(26, 115, 232, 0.7)'
-            ],
-            borderColor: [
-                'rgba(26, 115, 232, 1)',
-                'rgba(26, 115, 232, 1)',
-                'rgba(26, 115, 232, 1)',
-                'rgba(26, 115, 232, 1)'
-            ],
-            borderWidth: 1
-        }]
-    };
-
-    const config = {
-        type: 'bar',
-        data: data,
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top',
-                },
-                tooltip: {
-                    enabled: true
-                }
-            },
-            onClick: (e) => {
-                const element = chart.getElementAtEvent(e);
-                if (element.length > 0) {
-                    const datasetIndex = element[0]._datasetIndex;
-                    const index = element[0]._index;
-                    const value = chart.data.datasets[datasetIndex].data[index];
-                    const label = chart.data.labels[index];
-
-                    // Change the color of the clicked bar
-                    chart.data.datasets[datasetIndex].backgroundColor = chart.data.datasets[datasetIndex].backgroundColor.map((color, i) => {
-                        if (i === index) return 'rgba(33, 161, 241, 0.8)';
-                        return 'rgba(26, 115, 232, 0.7)';
-                    });
-                    chart.update();
-                    alert(`You clicked on ${label} bar. Value: ${value}`);
-                }
-            }
-        }
-    };
-
-    const chart = new Chart(ctx, config);
-
+    // Section management
     sidebarItems.forEach((item) => {
         item.addEventListener('click', function () {
-            // Remove 'active' class from all items
             sidebarItems.forEach((el) => el.classList.remove('active'));
-            // Add 'active' class to clicked item
             this.classList.add('active');
 
-            // Load appropriate content
             const section = this.getAttribute('data-section');
-            loadContent(section);
+            showSection(section);
         });
     });
 
-    function loadContent(section) {
-        let contentHTML = '';
-        switch (section) {
-            case 'overview':
-                contentHTML = `
-                    <h2>Dashboard Overview</h2>
-                    <div class="overview-stats">
-                        <div class="stat-card">
-                            <h3>Total Jobs Posted</h3>
-                            <p id="jobsPosted" class="stat-value">56</p>
-                        </div>
-                        <div class="stat-card">
-                            <h3>Total Shortlisted Candidates</h3>
-                            <p id="shortlistedCandidates" class="stat-value">43</p>
-                        </div>
-                        <div class="stat-card">
-                            <h3>Total Interviews Scheduled</h3>
-                            <p id="interviewsScheduled" class="stat-value">12</p>
-                        </div>
-                        <div class="stat-card">
-                            <h3>Total Payments Processed</h3>
-                            <p id="paymentsProcessed" class="stat-value">$25,000</p>
-                        </div>
-                    </div>
-                    <div class="activity-graph">
-                        <canvas id="activityChart"></canvas>
-                    </div>
-                `;
-                break;
-            default:
-                contentHTML = `<h2>${section}</h2><p>${section} content goes here.</p>`;
-        }
+    function showSection(section) {
+        const overviewSection = document.querySelector('.overview-section');
+        const aiSection = document.getElementById('ai-assistant');
 
-        contentArea.innerHTML = contentHTML;
+        overviewSection.classList.add('hidden');
+        aiSection.classList.add('hidden');
+
+        if (section === 'overview') overviewSection.classList.remove('hidden');
+        if (section === 'aiAssistant') aiSection.classList.remove('hidden');
     }
+
+    // Load Overview Charts
+    const ctx1 = document.getElementById('visitSalesChart').getContext('2d');
+    const ctx2 = document.getElementById('trafficSourcesChart').getContext('2d');
+
+    new Chart(ctx1, {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+            datasets: [
+                { label: 'USA', data: [10, 15, 20, 25, 30, 35, 40, 45], backgroundColor: '#07268d' },
+                { label: 'UK', data: [5, 10, 15, 20, 25, 30, 35, 40], backgroundColor: '#03a9f4' }
+            ]
+        },
+        options: { responsive: true }
+    });
+
+    new Chart(ctx2, {
+        type: 'doughnut',
+        data: {
+            labels: ['Search Engines', 'Direct Click', 'Referral Traffic'],
+            datasets: [{ data: [50, 30, 20], backgroundColor: ['#07268d', '#03a9f4', '#fbc02d'] }]
+        },
+        options: { responsive: true }
+    });
+
+    // AI Assistant Functionality
+    const chatDisplay = document.getElementById('chatDisplay');
+    const userInput = document.getElementById('userInput');
+    const sendBtn = document.getElementById('sendBtn');
+
+    sendBtn.addEventListener('click', function () {
+        const userMessage = userInput.value.trim();
+        if (!userMessage) return;
+
+        const userChat = document.createElement('div');
+        userChat.textContent = `You: ${userMessage}`;
+        chatDisplay.appendChild(userChat);
+
+        const aiChat = document.createElement('div');
+        aiChat.textContent = `AI: Here's a response for "${userMessage}".`; // Replace with AI logic.
+        chatDisplay.appendChild(aiChat);
+
+        userInput.value = '';
+        chatDisplay.scrollTop = chatDisplay.scrollHeight;
+    });
 });
