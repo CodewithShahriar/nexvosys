@@ -61,9 +61,40 @@ body {
     font-size: 14px;
     transition: background-color 0.3s ease;
 }
+.btnr {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #fd0303a6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+.btny {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #d8b803;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+
 
 .btn:hover {
     background-color: #385bcd;
+    color: #fff;
+}
+.btny:hover {
+    background-color: #ffc801;
+    color: #fff;
+}
+.btnr:hover {
+    background-color: #fd0303d1;
     color: #fff;
 }
 
