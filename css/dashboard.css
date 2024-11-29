@@ -541,3 +541,156 @@ button:hover {
 }
 
 
+/* settings */
+/* Styles for the #settings section */
+#settings {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fc;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+  }
+  
+  #settings .settings-container {
+    display: flex;
+    max-width: 1200px;
+    
+    
+    overflow: hidden;
+  }
+  
+  /* Main Content Area */
+  #settings .settings-content {
+    padding: 20px;
+    flex: 2;
+  }
+  
+  
+  
+  #settings .settings-panel {
+    display: flex;
+    gap: 0px;
+    width: 800px;
+    
+  }
+  
+  
+  #settings .general-info, #settings .login-info {
+    background: #f1f3f5;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+  }
+  
+  #settings .general-info h2,
+  #settings .login-info h2 {
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  #settings .input-group {
+    margin-bottom: 15px;
+  }
+  
+  #settings .input-group label {
+    display: block;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  #settings .input-group input,
+  #settings .input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  #settings .profile-image {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #settings .profile-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+  }
+  
+  #settings .profile-image button {
+    background: #007bff;
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #settings .btn-primary {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #settings .btn-primary:hover {
+    background: #0056b3;
+  }
+  
+  /* Sidebar */
+  #settings .sidebar {
+    background: #f9fafa;
+    padding: 20px;
+    width: 300px;
+    border-left: 1px solid #ddd;
+  }
+  
+  #settings .preferences,
+  #settings .notifications {
+    margin-bottom: 30px;
+  }
+  
+  #settings .preferences h2,
+  #settings .notifications h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  #settings .preferences .input-group,
+  #settings .notifications .notification-item {
+    margin-bottom: 15px;
+  }
+  
+  #settings .notification-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #settings .notification-item label {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  #settings .btn-disabled {
+    background: #ccc;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: not-allowed;
+  }
+  
+  .hidden {
+    display: none !important;
+}

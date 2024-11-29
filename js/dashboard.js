@@ -15,8 +15,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showSection(section) {
         const sections = document.querySelectorAll('.main-content section');
-        sections.forEach((sec) => sec.classList.add('hidden'));
-
+        sections.forEach((sec) => sec.classList.add('hidden')); // Hide all sections
+    
+        // Ensure the settings section is hidden unless it's the active section
+        if (section !== 'settings') {
+            document.querySelector('#settings').classList.add('hidden');
+        }
+    
         switch (section) {
             case 'overview':
                 document.querySelector('.overview-section').classList.remove('hidden');
@@ -36,6 +41,9 @@ document.addEventListener('DOMContentLoaded', function () {
             case 'team':
                 document.querySelector('#team').classList.remove('hidden');
                 break;
+            case 'settings':
+                document.querySelector('#settings').classList.remove('hidden');
+                break;
             case 'aiAssistant':
                 document.querySelector('#ai-assistant').classList.remove('hidden');
                 break;
@@ -43,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.warn('Invalid section:', section);
         }
     }
+    
 
     // Overview Charts
     const ctx1 = document.getElementById('visitSalesChart').getContext('2d');
