@@ -108,26 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
         options: { responsive: true },
     });
 
-    // AI Assistant functionality
-    const chatDisplay = document.getElementById('chatDisplay');
-    const userInput = document.getElementById('userInput');
-    const sendBtn = document.getElementById('sendBtn');
-
-    sendBtn.addEventListener('click', function () {
-        const userMessage = userInput.value.trim();
-        if (!userMessage) return;
-
-        const userChat = document.createElement('div');
-        userChat.textContent = `You: ${userMessage}`;
-        chatDisplay.appendChild(userChat);
-
-        const aiChat = document.createElement('div');
-        aiChat.textContent = `AI: Here's a response for "${userMessage}".`; // Replace with AI logic.
-        chatDisplay.appendChild(aiChat);
-
-        userInput.value = '';
-        chatDisplay.scrollTop = chatDisplay.scrollHeight;
-    });
+    
 });
 
 
