@@ -20673,3 +20673,11 @@ footer {
 	border-radius: 5px;
 	border-color: #6689FF;
 }
+
+.link-animated a {
+    transition: .5s;
+}
+
+.link-animated a:hover {
+    padding-left: 10px;
+}
