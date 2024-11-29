@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Check if this is the Home item and redirect
             const section = this.getAttribute('data-section');
-            if (section === 'home') {
+            if (section === 'sign-out') {
                 window.location.href = 'index.html'; // Redirect to index.html
             } else {
                 showSection(section);
