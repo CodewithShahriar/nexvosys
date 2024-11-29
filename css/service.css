@@ -105,7 +105,9 @@ body {
     }
 
     .service-card {
-        width: 40%;
-        margin-bottom: 20px;
+        width: 100%; /* Full width for smaller screens */
+        max-width: 400px; /* Add a max-width to prevent excessive stretching */
+        margin: 10px 0; /* Add vertical spacing between the cards */
     }
 }
+
