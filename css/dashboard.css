@@ -104,52 +104,122 @@ body {
 }
 
 /* AI Assistant */
-.ai-section {
-    margin: 20px 0;
-}
-
-.chatbox {
+/* Styles for #ai-assistant */
+#ai-assistant {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 0px 20px;
     display: flex;
-    flex-direction: column;
-    border: 1px solid #ddd;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+  }
+  
+  #ai-assistant .assistant-container {
+    max-width: 1000px;
+    width: 100%;
+    background: #ffffff;
     border-radius: 10px;
-    padding: 10px;
-}
-
-.chat-display {
-    flex: 1;
-    height: 200px;
-    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+  }
+  
+  #ai-assistant .header {
+    margin-bottom: 20px;
+  }
+  
+  #ai-assistant .robot-icon {
+    font-size: 40px;
     margin-bottom: 10px;
-    border: 1px solid #919090;
-    padding: 200px;
-}
-
-.chat-input {
+  }
+  
+  #ai-assistant .header p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  #ai-assistant .faq h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  #ai-assistant .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  #ai-assistant .faq-item {
     display: flex;
-    gap: 10px;
-}
-
-.chat-input input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #919090;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
     border-radius: 5px;
-}
-
-.chat-input button {
-    padding: 10px 20px;
-    background-color: #4069ef;
-    color: white;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #ai-assistant .faq-item:hover {
+    background-color: #eaeaea;
+  }
+  
+  #ai-assistant .faq-item span {
+    font-size: 14px;
+    color: #333;
+    flex: 1;
+  }
+  
+  #ai-assistant .faq-item button {
+    background: transparent;
     border: none;
+    font-size: 18px;
+    color: #007bff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    
+  }
+  
+  #ai-assistant .faq-item button:hover {
+    color: #0056b3;
+  }
+  
+  #ai-assistant .chat-input {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #ai-assistant .chat-input input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #5e5e5e91;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  
+  #ai-assistant .chat-input button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: #ffffff;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.chat-input button:hover {
-    background-color: #1a4eff;
-}
-
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  #ai-assistant .chat-input button:hover {
+    background-color: #0056b3;
+    margin-top: 20px;
+  }
+  
 
 
 .card {

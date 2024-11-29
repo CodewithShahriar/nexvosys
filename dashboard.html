@@ -16,7 +16,7 @@
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar">
-            <h2>Nexvosys Dashboard</h2>
+            <h2>Admin Dashboard</h2>
             <ul>
                 <li data-section="overview" class="active">Overview</li>
                 <li data-section="projects">Projects</li>
@@ -27,7 +27,7 @@
                 <li data-section="settings">Settings</li>
                 <li data-section="aiAssistant">AI Assistant</li>
                 <li data-section="home">Home</li>
-                <li data-section="logout" class="logout">Sign out</li>
+                <!-- <li data-section="logout" class="logout">Sign out</li> -->
             </ul>
         </aside>
 
@@ -411,16 +411,48 @@
                 </section>
                 
                 <!-- AI Assistant Section -->
-                <section id="ai-assistant" class="ai-section hidden">
-                    <h2><span class="icon">🤖</span> AI Assistant</h2>
-                    <div class="chatbox">
-                        <div id="chatDisplay" class="chat-display"></div>
-                        <div class="chat-input">
-                            <input type="text" id="userInput" placeholder="Ask me anything..." aria-label="User Input">
-                            <button id="sendBtn">Generate <span>➤</span></button>
+                <section id="ai-assistant">
+                    <div class="assistant-container">
+                      <!-- Header Section -->
+                      <div class="header">
+                        <div class="robot-icon">
+                          🤖
                         </div>
+                        <p>
+                          This Ai-Assistant still in its experimental phase. Chatting with it and rating its responses will help improve the experience.
+                        </p>
+                      </div>
+                
+                      <!-- FAQ Section -->
+                      <div class="faq">
+                        <h2>Most Frequently Asked Questions</h2>
+                        <div class="faq-grid">
+                          <div class="faq-item">
+                            <span>How can I increase website traffic?</span>
+                            <button>➔</button>
+                          </div>
+                          <div class="faq-item">
+                            <span>How can we improve the SEO ranking for our client's website?</span>
+                            <button>➔</button>
+                          </div>
+                          <div class="faq-item">
+                            <span>What are the latest trends in mobile app development?</span>
+                            <button>➔</button>
+                          </div>
+                          <div class="faq-item">
+                            <span>What are the advantages of using Mongoose with MongoDB?</span>
+                            <button>➔</button>
+                          </div>
+                        </div>
+                      </div>
+                
+                      <!-- Chat Input -->
+                      <div class="chat-input">
+                        <input type="text" placeholder="Ask me anything...">
+                        <button>➔</button>
+                      </div>
                     </div>
-                </section>
+                  </section>
             </div>
         </main>
     </div>
