@@ -1,124 +1,80 @@
-/* Container styling */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px 0;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Service Row */
+.services-container {
+    background-color: #6689FF;
+    padding: 30px 20px;
+    text-align: center;
+}
+
 .service-row {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px; /* Space between rows */
+    justify-content: space-around;
+    
 }
 
-/* Service Card */
 .service-card {
-    flex: 1; /* Each card takes equal space */
-    margin: 0 10px; /* Space between cards */
-    background: #ffffff;
-    padding: 30px;
-    border: 1px solid #ccc; /* Added border */
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center align content in cards */
-    transition: transform 0.3s; /* Add transition for hover effect */
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    width: 100px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-top: 20px;
+    
 }
 
 .service-card:hover {
-    transform: translateY(-5px); /* Slight hover effect */
+    transform: scale(1.02);
 }
 
-/* Icon styling */
-.service-card .icon {
-    font-size: 40px;
-    color: #888;
-    transition: transform 0.3s;
+.service-icon {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
 }
 
-.service-card .icon:hover {
-    transform: scale(1.1);
-}
-
-/* Headings */
-.service-card h2 {
-    font-size: 30px;
+.service-card h3 {
     color: #35424a;
-    margin-top: 10px;
-}
-
-/* Paragraph styling */
-.service-card p {
+    font-size: 20px;
     margin: 10px 0;
-    text-align: justify; /* Justify text */
-    line-height: 1.5; /* Line height for better readability */
 }
 
-/* Button container */
-.buttons {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
+.service-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
 }
 
-/* Button styling */
 .btn {
     display: inline-block;
     padding: 10px 15px;
-    background-color: transparent; /* Transparent background */
-    border: 2px solid #6689FF; /* Blue outline */
-    color: #6689FF; /* Text color */
+    background-color: #6689FF;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    margin: 0 10px;
-    transition: background-color 0.3s, color 0.3s; /* Add transition for hover effects */
+    font-size: 14px;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #6689FF; /* Dark blue background on hover */
-    color: #ffffff; /* Change text color to white on hover */
+    background-color: #385bcd;
+    color: #fff;
 }
 
-/* Learn More Button styling */
-.learn-more-btn {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: transparent; /* Transparent background */
-    border: 2px solid #6689FF; /* Blue outline */
-    color: #6689FF; /* Text color */
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 0 10px;
-    transition: background-color 0.3s, color 0.3s; /* Add transition for hover effects */
-}
-
-
-
-
-/* Get Started Button styling */
-.btn {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #6689FF; /* Keep the original background */
-    color: #ffffff; /* Text color remains white */
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 0 10px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #4a68c7; /* Darker blue on hover */
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
     .service-row {
-        flex-direction: column; /* Stack cards vertically on smaller screens */
+        flex-direction: column;
+        align-items: center;
     }
 
     .service-card {
-        margin: 10px 0; /* Space between stacked cards */
+        width: 40%;
+        margin-bottom: 20px;
     }
 }

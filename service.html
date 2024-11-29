@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Include FontAwesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:400,500,600%7CTeko:300,400,500%7CMaven+Pro:500">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -106,124 +108,191 @@
     <link rel="stylesheet" href="css/service.css"> <!-- Link to your service-specific CSS file -->
 </head>
 <body>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container"><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
 
-<header class="section page-header">
-    <!-- RD Navbar-->
-    <div class="rd-navbar-wrap">
-        <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-            <div class="rd-navbar-main-outer">
+    <div class="page">
+      <div id="home">
+        
+        <!-- Page Header-->
+        <header class="section page-header">
+          <!-- Navbar-->
+          <div class="rd-navbar-wrap">
+            <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+              <div class="rd-navbar-main-outer">
                 <div class="rd-navbar-main">
-                    <!-- RD Navbar Panel-->
-                    <div class="rd-navbar-panel">
-                        <!-- RD Navbar Toggle-->
-                        <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                        <!-- RD Navbar Brand-->
-                        <div class="rd-navbar-brand"><a class="brand" href="index.html"><img src="images/logo 1.png" alt="" width="223" height="50"/></a></div>
-                    </div>
-                    <div class="rd-navbar-main-element">
-                        <div class="rd-navbar-nav-wrap">
-                            <!-- RD Navbar Share-->
-                            <div class="rd-navbar-share fl-bigmug-line-share27" data-rd-navbar-toggle=".rd-navbar-share-list">
-                                <ul class="list-inline rd-navbar-share-list">
-                                    <li class="rd-navbar-share-list-item"><a class="icon fa fa-facebook" href="#"></a></li>
-                                    <li class="rd-navbar-share-list-item"><a class="icon fa fa-twitter" href="#"></a></li>
-                                    <li class="rd-navbar-share-list-item"><a class="icon fa fa-google-plus" href="#"></a></li>
-                                    <li class="rd-navbar-share-list-item"><a class="icon fa fa-instagram" href="#"></a></li>
-                                </ul>
-                            </div>
-                            <ul class="rd-navbar-nav">
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="/index.html">Home</a></li>
-                                <li class="rd-nav-item active"><a class="rd-nav-link" href="#services">Services</a></li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="#projects">Projects</a></li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="#team">Team</a></li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="#news">News</a></li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="#contacts">Contacts</a></li>
-                            </ul>
+                  <!--  Navbar Panel-->
+                  <div class="rd-navbar-panel">
+                    <!--  Navbar Toggle-->
+                    <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                    <!--  Navbar Brand-->
+                    <div class="rd-navbar-brand"><a class="brand" href="index.html"><img src="images/logo 1.png" alt="" width="223" height="50"/></a></div>
+                  </div>
+                  <div class="rd-navbar-main-element">
+                    <div class="rd-navbar-nav-wrap">
+                      <!--  Navbar Share-->
+                      <div class="rd-navbar-share fl-bigmug-line-share27" data-rd-navbar-toggle=".rd-navbar-share-list">
+                        <ul class="list-inline rd-navbar-share-list">
+                          <li class="rd-navbar-share-list-item"><a class="icon fa fa-facebook" href="#"></a></li>
+                          <li class="rd-navbar-share-list-item"><a class="icon fa fa-twitter" href="#"></a></li>
+                          <li class="rd-navbar-share-list-item"><a class="icon fa fa-google-plus" href="#"></a></li>
+                          <li class="rd-navbar-share-list-item"><a class="icon fa fa-instagram" href="#"></a></li>
+                        </ul>
+                      </div>
+                      <ul class="rd-navbar-nav">
+                        <li class="rd-nav-item active"><a class="rd-nav-link" href="#home">Home</a></li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="/service.html">Services</a></li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="#projects">Projects</a></li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="#team">Team</a></li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="#news">News</a></li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="#contacts">Contacts</a></li>
+                      </ul>
+                      <div class="rd-navbar-auth-buttons">
+                        <a href="#" class="auth-button-signup button-ujaraks " onclick="showSignupModal()">Sign Up</a>
+                        <a href="#" class="auth-button-login" onclick="showloginModal()">Log In</a>
+                      </div>
+                      
+                      
+                      <!-- auth form -->
+                       
+                        <!-- Signup Modal -->
+                        <div id="signupModal" class="modal">
+                          <div class="modal-content">
+                              <span class="close" onclick="closeSignupModal()">&times;</span>
+                              <h2>Sign Up</h2>
+                              <input type="text" id="signup-name" placeholder="Username" required>
+                              <input type="email" id="signup-email" placeholder="Email" required>
+                              <input type="password" id="signup-password" placeholder="Create Password" required>
+                              <!-- Terms and conditions checkbox -->
+                              <label class="terms-label">
+                                <input type="checkbox" id="termsCheckbox" required> By creating an account, you agree to our 
+                                <a href="#" class="terms-link">terms and conditions</a>.
+                            </label>
+                            
+                              <button type="submit" class="auth-button-submit ">Create Account</button>
+                          </div>
+                      </div>
+                      
+
+                      <!-- Login Modal -->
+                      <div id="loginModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeloginModal('loginModal')">&times;</span>
+                            <h2>Log In</h2>
+                            <form id="loginForm">
+                                <input type="text" id="login-username" placeholder="Email/Username" required>
+                                <input type="password" id="login-password" placeholder="Password" required>
+                                <a href="#" onclick="forgotPassword()" style="color: #6689FF; display: block; margin-top: 5px; margin-bottom: 5px;">Forgot Password?</a>
+
+                                <button type="submit" class="auth-button-submit">Log In</button>
+                            </form>
+
+                            
+        <!-- Login Credentials Section -->
+        <div class="login-credentials-section">
+          <h3>Login Credentials</h3>
+          <div class="login-options">
+              <button class="login-option" id="adminLogin">Admin Login</button>
+              <button class="login-option" id="developerLogin">Developer Login</button>
+              <button class="login-option" id="clientLogin">Client Login</button>
+          </div>
+      </div>
                         </div>
+                      </div>
+
                     </div>
+                  </div>
                 </div>
-            </div>
-        </nav>
-    </div>
-</header>
+              </div>
+            </nav>
+          </div>
+        </header>
 
-<div class="container">
-    <div class="service-row">
-        <div class="service-card">
-            <div class="icon">
-                <i class="fas fa-laptop-code"></i>
+<main>
+    <section class="services-container">
+        <div class="service-row">
+            <div class="service-card">
+                <img src="/images/s11.avif" alt="Video Production" class="service-icon" style="width: 500px;height: 250px;">
+                <h3>Web Development</h3>
+                <p>We specialize in building responsive, user-friendly websites that are optimized for performance and functionality. Our web development services ensure a seamless user experience across all devices, helping your business grow with cutting-edge technology and best practices.</p>
+                <a href="#" class="btn"><i class="fas fa-info-circle"></i>
+                     More Details</a>
+                <a href="#" class="btn"><i class="fas fa-star"></i>
+                     Reviews</a>
+                <a href="#" class="btn"><i class="fas fa-dollar-sign"></i>
+                     Pricing</a>
             </div>
-            <h2>Web Development</h2>
-            <p>Our web development services are designed to create responsive, user-friendly websites that utilize cutting-edge technologies. We focus on optimizing performance and ensuring seamless functionality across a variety of devices. By implementing the latest web standards and best practices, we guarantee an engaging user experience that meets the unique needs of your audience.</p>
-            <div class="buttons">
-                <a href="#" class="learn-more-btn">Learn More</a>
-                <a href="#" class="btn">Get Started</a>
+            <div class="service-card">
+                <img src="/images/s22.avif" alt="SEO Optimization" class="service-icon" style="width: 500px; height: 250px;">
+                <h3>App Development</h3>
+                <p>We create innovative mobile applications for both iOS and Android platforms, focusing on intuitive design and seamless functionality. Our apps are tailored to meet user needs and deliver a great experience, ensuring your business stays ahead in the mobile space.</p>
+                <a href="#" class="btn"><i class="fas fa-info-circle"></i>
+                    More Details</a>
+               <a href="#" class="btn"><i class="fas fa-star"></i>
+                    Reviews</a>
+               <a href="#" class="btn"><i class="fas fa-dollar-sign"></i>
+                    Pricing</a>
+            </div>
+            <div class="service-card">
+                <img src="images/s3.png" alt="Cloud Solutions" class="service-icon" style="width: 500px; height: 250px;">
+                <h3>Software Development</h3>
+                <p>We create custom, scalable software solutions to meet your business needs. From desktop apps to enterprise systems, our team ensures secure, efficient, and high-performance solutions that integrate seamlessly with your workflows. We focus on delivering results that drive innovation</p>
+                <a href="#" class="btn"><i class="fas fa-info-circle"></i>
+                    More Details</a>
+               <a href="#" class="btn"><i class="fas fa-star"></i>
+                    Reviews</a>
+               <a href="#" class="btn"><i class="fas fa-dollar-sign"></i>
+                    Pricing</a>
             </div>
         </div>
-
-        <div class="service-card">
-            <div class="icon">
-                <i class="fas fa-mobile-alt"></i>
+        <div class="service-row">
+            <div class="service-card">
+                <img src="/images/s4.jpg" alt="Happy Customers" class="service-icon" style="width: 500px; height: 250px;">
+                <h3>UI/UX Design</h3>
+                <p>We design intuitive, user-centered interfaces that offer seamless experiences. Our team focuses on optimizing both the visual and functional aspects, ensuring your product is not only attractive, helping to engage users and improve retention.</p>
+                <a href="#" class="btn"><i class="fas fa-info-circle"></i>
+                    More Details</a>
+               <a href="#" class="btn"><i class="fas fa-star"></i>
+                    Reviews</a>
+               <a href="#" class="btn"><i class="fas fa-dollar-sign"></i>
+                    Pricing</a>
             </div>
-            <h2>App Development</h2>
-            <p> We specialize in the development of innovative mobile applications tailored for both iOS and Android platforms. Our approach emphasizes a robust user experience and effective functionality, allowing us to meet and exceed client expectations. We prioritize user satisfaction, making sure every application we build is intuitive, efficient, and designed to solve real-world problems.</p>
-            <div class="buttons">
-                <a href="#" class="learn-more-btn">Learn More</a>
-                <a href="#" class="btn">Get Started</a>
+            <div class="service-card">
+                <img src="/images/s5.webp" alt="Marketing Strategy" class="service-icon" style="width: 500px; height: 250px;">
+                <h3>Illustration</h3>
+                <p>Our talented illustrators create custom visuals that bring your ideas to life. From marketing materials to storytelling, we craft unique illustrations that align with your brand, enhancing communication and making your content visually captivating.</p>
+                <a href="#" class="btn"><i class="fas fa-info-circle"></i>
+                    More Details</a>
+               <a href="#" class="btn"><i class="fas fa-star"></i>
+                    Reviews</a>
+               <a href="#" class="btn"><i class="fas fa-dollar-sign"></i>
+                    Pricing</a>
+            </div>
+            <div class="service-card">
+                <img src="/images/s6.jpg" alt="Podcast Talks" class="service-icon" style="width: 500px; height: 250px;">
+                <h3>Digital Marketing</h3>
+                <p>We provide tailored digital marketing strategies to boost your online presence. From SEO and social media marketing to content strategies, we help you connect with your audience and drive measurable results, enhancing brand visibility and growth.
+
+                </p>
+                <a href="#" class="btn"><i class="fas fa-info-circle"></i>
+                    More Details</a>
+               <a href="#" class="btn"><i class="fas fa-star"></i>
+                    Reviews</a>
+               <a href="#" class="btn"><i class="fas fa-dollar-sign"></i>
+                    Pricing</a>
             </div>
         </div>
-
-        <div class="service-card">
-            <div class="icon">
-                <i class="fas fa-paint-brush"></i>
-            </div>
-            <h2>Graphic Design</h2>
-            <p>Our graphic design services provide visually striking and impactful designs that enhance your brand identity. We create everything from marketing materials to digital assets, ensuring each design communicates your brand's message effectively. Our talented team understands the importance of visual storytelling, and we strive to craft graphics that resonate with your target audience.</p>
-            <div class="buttons">
-                <a href="#" class="learn-more-btn">Learn More</a>
-                <a href="#" class="btn">Get Started</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="service-row">
-        <div class="service-card">
-            <div class="icon">
-                <i class="fas fa-tachometer-alt"></i>
-            </div>
-            <h2>UI/UX Design</h2>
-            <p>Our UI/UX design services focus on enhancing user satisfaction by improving the usability and accessibility of your digital products. We prioritize creating engaging experiences that captivate users and encourage interaction. Through research and user testing, we develop designs that not only look good but also function seamlessly, ensuring a positive experience for all users.</p>
-            <div class="buttons">
-                <a href="#" class="learn-more-btn">Learn More</a>
-                <a href="#" class="btn">Get Started</a>
-            </div>
-        </div>
-
-        <div class="service-card">
-            <div class="icon">
-                <i class="fas fa-pencil-alt"></i>
-            </div>
-            <h2>Illustration</h2>
-            <p>We offer professional illustration services that bring your ideas to life through creative and engaging visuals. Whether for books, marketing materials, or branding, our illustrations enhance storytelling and effectively convey your unique message. Our talented artists work closely with you to ensure that each illustration aligns with your vision and captures the essence of your project perfectly.</p>
-            <div class="buttons">
-                <a href="#" class="learn-more-btn">Learn More</a>
-                <a href="#" class="btn">Get Started</a>
-            </div>
-        </div>
-
-        <div class="service-card">
-            <div class="icon">
-                <i class="fas fa-bullhorn"></i>
-            </div>
-            <h2>Digital Marketing</h2>
-            <p>Our comprehensive digital marketing strategies include search engine optimization (SEO), social media marketing, and content marketing to increase your online visibility. We focus on engaging your target audience through tailored campaigns that deliver measurable results. Our goal is to enhance your online presence, driving traffic and converting leads into loyal customers.</p>
-            <div class="buttons">
-                <a href="#" class="learn-more-btn">Learn More</a>
-                <a href="#" class="btn">Get Started</a>
-            </div>
-        </div>
-    </div>
-</div>
+    </section>
+</main>
+<footer>
+    <!-- Include your Footer -->
+</footer>
+</body>
 <!-- footer section -->
 
 <footer class="section footer-classic">
