@@ -5,7 +5,7 @@ body {
 }
 
 .services-container {
-    background-color: #6689FF;
+    /* background-color: #6689FF; */
     padding: 30px 20px;
     text-align: center;
 }
@@ -17,12 +17,12 @@ body {
 }
 
 .service-card {
-    background: #fff;
+    background: #d8eeffbf;
     border-radius: 8px;
     padding: 15px;
     width: 100px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.642);
     transition: transform 0.3s ease;
     margin-top: 20px;
     
