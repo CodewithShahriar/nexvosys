@@ -8,6 +8,23 @@ document.addEventListener('DOMContentLoaded', function () {
             sidebarItems.forEach((el) => el.classList.remove('active'));
             this.classList.add('active');
 
+            // Check if this is the Home item and redirect
+            const section = this.getAttribute('data-section');
+            if (section === 'home') {
+                window.location.href = 'index.html'; // Redirect to index.html
+            } else {
+                showSection(section);
+            }
+        });
+    });
+    
+
+    // Sidebar section management
+    sidebarItems.forEach((item) => {
+        item.addEventListener('click', function () {
+            sidebarItems.forEach((el) => el.classList.remove('active'));
+            this.classList.add('active');
+
             const section = this.getAttribute('data-section');
             showSection(section);
         });
